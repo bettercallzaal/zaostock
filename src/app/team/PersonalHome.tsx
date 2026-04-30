@@ -5,13 +5,29 @@ import { ResearchLinks } from './ResearchLinks';
 import { FestivalProgress } from './FestivalProgress';
 import { QuickAdd } from './QuickAdd';
 import { BioEditor } from './BioEditor';
+import { PartnerEditor } from './PartnerEditor';
 import { OnboardingChecklist } from './OnboardingChecklist';
 import { UpdatesFeed, type FeedEntry } from './UpdatesFeed';
 import { CompletenessLeaderboard } from './CompletenessLeaderboard';
 
 const FESTIVAL_DATE = new Date('2026-10-03T12:00:00-04:00');
 
-interface Member { id: string; name: string; role: string; scope: string; bio?: string; links?: string; photo_url?: string; status_text?: string; skills?: string; }
+interface Member {
+  id: string;
+  name: string;
+  role: string;
+  scope: string;
+  bio?: string;
+  links?: string;
+  photo_url?: string;
+  status_text?: string;
+  skills?: string;
+  partner_brand?: string;
+  partner_role?: string;
+  partner_url?: string;
+  partner_logo_url?: string;
+  partner_active?: boolean;
+}
 
 interface Todo {
   id: string;
@@ -163,6 +179,22 @@ export function PersonalHome({ member, allMembers, todos, sponsors, artists, mil
           initialRole={member.role || 'member'}
           initialStatusText={member.status_text || ''}
           initialSkills={member.skills || ''}
+        />
+      </div>
+
+      {/* Partner editor — gated on bio completeness */}
+      <div id="partner-anchor" className="scroll-mt-24">
+        <PartnerEditor
+          bio={member.bio || ''}
+          photoUrl={member.photo_url || ''}
+          scope={member.scope || ''}
+          links={member.links || ''}
+          role={member.role || 'member'}
+          initialPartnerBrand={member.partner_brand || ''}
+          initialPartnerRole={member.partner_role || ''}
+          initialPartnerUrl={member.partner_url || ''}
+          initialPartnerLogoUrl={member.partner_logo_url || ''}
+          initialPartnerActive={Boolean(member.partner_active)}
         />
       </div>
 

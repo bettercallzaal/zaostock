@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { RSVPForm } from '../RSVPForm';
-import { getPublicMembers, getStockCounts, type PublicMember } from '@/lib/members';
+import { getPublicMembers, getStockCounts, getCombinedPartners, type PublicMember } from '@/lib/members';
 import { LineupMarquee } from '@/components/festival/LineupMarquee';
 import { FactStrip } from '@/components/festival/FactStrip';
 import { SectionHeader } from '@/components/festival/SectionHeader';
@@ -84,13 +84,6 @@ const PAST_EVENTS = [
   },
 ];
 
-const PARTNERS = [
-  { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
-  { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
-].filter((p) => p.confirmed);
-
 const NAV = [
   { href: '/program', label: 'Program' },
   { href: '/suggest', label: 'Suggest' },
@@ -99,7 +92,11 @@ const NAV = [
 ];
 
 export default async function TestPage() {
-  const [publicMembers, counts] = await Promise.all([getPublicMembers(), getStockCounts()]);
+  const [publicMembers, counts, PARTNERS] = await Promise.all([
+    getPublicMembers(),
+    getStockCounts(),
+    getCombinedPartners(),
+  ]);
   const typedMembers: PublicMember[] = publicMembers;
 
   return (
@@ -281,20 +278,37 @@ export default async function TestPage() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeader eyebrow="Partners" title="Building this together." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
-            {PARTNERS.map((p) => (
-              <div key={p.name} className="bg-[#0d1b2a] p-6">
-                <div className="flex items-center justify-between gap-3 mb-3">
-                  <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.2em] text-[#f5a623]">
-                    Confirmed
-                  </span>
-                  <span className="font-[family-name:var(--font-mono)] text-[10px] text-gray-600">
-                    /CFM
-                  </span>
+            {PARTNERS.map((p) => {
+              const inner = (
+                <>
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.2em] text-[#f5a623]">
+                      {p.source === 'member' ? 'Crew partner' : 'Confirmed'}
+                    </span>
+                    <span className="font-[family-name:var(--font-mono)] text-[10px] text-gray-600">
+                      {p.source === 'member' ? '/CREW' : '/CFM'}
+                    </span>
+                  </div>
+                  <p className="font-bold text-white text-lg tracking-tight">{p.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-400 mt-1">{p.role}</p>
+                </>
+              );
+              return p.url ? (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#0d1b2a] p-6 hover:bg-[#0d1b2a]/80 transition-colors"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div key={p.name} className="bg-[#0d1b2a] p-6">
+                  {inner}
                 </div>
-                <p className="font-bold text-white text-lg tracking-tight">{p.name}</p>
-                <p className="text-xs sm:text-sm text-gray-400 mt-1">{p.role}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

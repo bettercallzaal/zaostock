@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { RSVPForm } from './RSVPForm';
-import { getPublicMembers, getStockCounts, type PublicMember } from '@/lib/members';
+import { getPublicMembers, getStockCounts, getCombinedPartners, type PublicMember } from '@/lib/members';
 import { PublicTeamGrid } from './PublicTeamGrid';
 
 export const dynamic = 'force-dynamic';
@@ -56,19 +56,14 @@ const PAST_EVENTS = [
   },
 ];
 
-const PARTNERS = [
-  { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
-  { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
-].filter((p) => p.confirmed);
-
 export default async function StockPage() {
-  const [publicMembers, counts] = await Promise.all([
+  const [publicMembers, counts, partners] = await Promise.all([
     getPublicMembers(),
     getStockCounts(),
+    getCombinedPartners(),
   ]);
   const typedMembers: PublicMember[] = publicMembers;
+  const PARTNERS = partners;
 
   return (
     <div className="min-h-[100dvh] bg-[#0a1628] text-white pb-12">
@@ -195,17 +190,32 @@ export default async function StockPage() {
         <section className="space-y-3">
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Partners</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {PARTNERS.map((partner) => (
-              <div key={partner.name} className="bg-[#0d1b2a] rounded-xl p-4 border border-white/[0.08]">
-                <div className="flex items-center gap-2">
-                  <p className="font-medium text-white text-sm">{partner.name}</p>
-                  {partner.confirmed && (
+            {PARTNERS.map((partner) => {
+              const card = (
+                <>
+                  <div className="flex items-center gap-2">
+                    <p className="font-medium text-white text-sm">{partner.name}</p>
                     <span className="text-[10px] text-[#f5a623] bg-[#f5a623]/10 rounded-full px-1.5 py-0.5">Confirmed</span>
-                  )}
+                  </div>
+                  <p className="text-xs text-gray-400 mt-1">{partner.role}</p>
+                </>
+              );
+              return partner.url ? (
+                <a
+                  key={partner.name}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#0d1b2a] rounded-xl p-4 border border-white/[0.08] hover:border-[#f5a623]/30 transition-colors"
+                >
+                  {card}
+                </a>
+              ) : (
+                <div key={partner.name} className="bg-[#0d1b2a] rounded-xl p-4 border border-white/[0.08]">
+                  {card}
                 </div>
-                <p className="text-xs text-gray-400 mt-1">{partner.role}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

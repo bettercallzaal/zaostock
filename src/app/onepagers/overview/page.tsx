@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { getStockTeamMember } from '@/lib/auth/session';
 import { getOnePager } from '@/lib/onepagers';
-import { getStockCounts, getPublicMembers } from '@/lib/members';
+import { getStockCounts, getPublicMembers, getCombinedPartners } from '@/lib/members';
 import { CopyButton } from '../[slug]/CopyButton';
 import { PrintButton } from '../[slug]/PrintButton';
 
@@ -36,11 +36,6 @@ interface Pillar {
   body: string;
 }
 
-interface Partner {
-  name: string;
-  role: string;
-  confirmed: boolean;
-}
 
 const PILLARS: Pillar[] = [
   {
@@ -62,13 +57,6 @@ const PILLARS: Pillar[] = [
       'We use crypto, Farcaster, and decentralized tools because they make the work easier — not because they ARE the work. Tech serves the music. Always that order.',
   },
 ];
-
-const PARTNERS: Partner[] = [
-  { name: 'Town of Ellsworth', role: 'Venue partner — Franklin St Parklet', confirmed: true },
-  { name: 'Heart of Ellsworth', role: 'Local promotion + Maine cultural ties', confirmed: true },
-  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
-].filter((p) => p.confirmed);
 
 const SPONSOR_TIERS = [
   {
@@ -135,12 +123,14 @@ function daysUntil(iso: string): number {
 }
 
 export default async function OverviewOnePager() {
-  const [pager, counts, members, session] = await Promise.all([
+  const [pager, counts, members, session, partners] = await Promise.all([
     getOnePager('overview'),
     getStockCounts().catch(() => null),
     getPublicMembers().catch(() => []),
     getStockTeamMember().catch(() => null),
+    getCombinedPartners().catch(() => []),
   ]);
+  const PARTNERS = partners;
 
   const days = daysUntil(FESTIVAL_DATE);
   const teamCount = (members ?? []).length;
@@ -350,12 +340,12 @@ export default async function OverviewOnePager() {
                   </div>
                   <span
                     className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
-                      p.confirmed
-                        ? 'bg-emerald-500/15 text-emerald-300 print:bg-emerald-100 print:text-emerald-800'
-                        : 'bg-slate-700/50 text-slate-300 print:bg-slate-200 print:text-slate-700'
+                      p.source === 'member'
+                        ? 'bg-amber-500/15 text-amber-300 print:bg-amber-100 print:text-amber-800'
+                        : 'bg-emerald-500/15 text-emerald-300 print:bg-emerald-100 print:text-emerald-800'
                     }`}
                   >
-                    {p.confirmed ? 'Confirmed' : 'In conversation'}
+                    {p.source === 'member' ? 'Crew partner' : 'Confirmed'}
                   </span>
                 </li>
               ))}

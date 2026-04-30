@@ -95,7 +95,29 @@ export default async function StockTeamPage() {
 
   const goals = goalsRes.status === 'fulfilled' ? goalsRes.value.data || [] : [];
   const todos = todosRes.status === 'fulfilled' ? todosRes.value.data || [] : [];
-  const members = membersRes.status === 'fulfilled' ? membersRes.value.data || [] : [];
+  const baseMembers = membersRes.status === 'fulfilled' ? membersRes.value.data || [] : [];
+
+  // Best-effort partner state for the signed-in member only — isolated from the main
+  // members select so missing partner_* columns never break the dashboard.
+  const partnerProbe = await supabase
+    .from('team_members')
+    .select('partner_brand, partner_role, partner_url, partner_logo_url, partner_active')
+    .eq('id', member.memberId)
+    .maybeSingle();
+  const myPartner = partnerProbe.error ? null : partnerProbe.data;
+
+  const members = baseMembers.map((m) =>
+    m.id === member.memberId && myPartner
+      ? {
+          ...m,
+          partner_brand: myPartner.partner_brand ?? '',
+          partner_role: myPartner.partner_role ?? '',
+          partner_url: myPartner.partner_url ?? '',
+          partner_logo_url: myPartner.partner_logo_url ?? '',
+          partner_active: Boolean(myPartner.partner_active),
+        }
+      : m,
+  );
   const sponsors = sponsorsRes.status === 'fulfilled' ? sponsorsRes.value.data || [] : [];
   const artists = artistsRes.status === 'fulfilled' ? artistsRes.value.data || [] : [];
   const milestones = timelineRes.status === 'fulfilled' ? timelineRes.value.data || [] : [];
