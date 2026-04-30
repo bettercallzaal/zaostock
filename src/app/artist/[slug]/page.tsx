@@ -52,7 +52,7 @@ export default async function ArtistProfilePage({ params, searchParams }: Props)
         <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
           <p className="text-xs text-[#f5a623] uppercase tracking-wider font-bold">About ZAOstock</p>
           <p className="text-sm text-gray-300 leading-relaxed">
-            {artist.name} is on the ZAOstock roster for Oct 3, 2026 at the Franklin Street Parklet in Ellsworth, Maine. Community-built outdoor music festival, part of the 9th Annual Art of Ellsworth. Ten artists, one stage, live cypher, WaveWarZ bracket. Run by The ZAO.
+            {artist.name} is on the ZAOstock roster for Oct 3, 2026 at the Franklin Street Parklet in Ellsworth, Maine. Community-built outdoor music festival, part of the 9th Annual Art of Ellsworth. Independent artists, one stage, WaveWarZ bracket. Run by The ZAO.
           </p>
           <div className="flex gap-2 pt-1">
             <Link
@@ -66,12 +66,6 @@ export default async function ArtistProfilePage({ params, searchParams }: Props)
               className="text-xs bg-white/[0.06] hover:bg-white/[0.12] text-gray-200 rounded-lg px-3 py-2 transition-colors"
             >
               Program
-            </Link>
-            <Link
-              href="/cypher"
-              className="text-xs bg-white/[0.06] hover:bg-white/[0.12] text-gray-200 rounded-lg px-3 py-2 transition-colors"
-            >
-              Cypher signup
             </Link>
           </div>
         </div>

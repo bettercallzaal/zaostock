@@ -70,7 +70,7 @@ export default async function MemberProfilePage({ params }: Props) {
         <section className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
           <p className="text-xs text-[#f5a623] uppercase tracking-wider font-bold">About ZAOstock</p>
           <p className="text-sm text-gray-300 leading-relaxed">
-            {member.name} is part of the crew building ZAOstock - a community-built outdoor music festival in Ellsworth, Maine on October 3, 2026. Ten artists, one stage, all day at the Franklin Street Parklet. Part of the 9th Annual Art of Ellsworth.
+            {member.name} is part of the crew building ZAOstock - a community-built outdoor music festival in Ellsworth, Maine on October 3, 2026. Independent artists, one stage, all day at the Franklin Street Parklet. Part of the 9th Annual Art of Ellsworth.
           </p>
           <div className="flex gap-2 pt-2">
             <Link

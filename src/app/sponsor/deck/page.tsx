@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'ZAOstock Partner Deck | Oct 3, 2026',
-  description: 'Partner packages for ZAOstock, a community-built outdoor music festival in Ellsworth, Maine on October 3, 2026. Tax-deductible via Fractured Atlas 501(c)(3).',
+  description: 'Partner packages for ZAOstock, a community-built outdoor music festival in Ellsworth, Maine on October 3, 2026. Tax-deductible via New Media Commons 501(c)(3).',
   openGraph: {
     title: 'ZAOstock Partner Deck',
     description: 'Become a Main Stage, Broadcast, or Year-Round Partner for ZAOstock on Oct 3, 2026.',
@@ -47,7 +47,7 @@ const TRACKS = [
       'Advisory seat for Year 2 planning',
       'Priority placement in 2027',
       'Quarterly collaboration across The ZAO calendar',
-      'Tax-deductible via Fractured Atlas 501(c)(3)',
+      'Tax-deductible via New Media Commons 501(c)(3)',
     ],
   },
 ];
@@ -55,7 +55,7 @@ const TRACKS = [
 const FAQ = [
   {
     q: 'Is this tax-deductible?',
-    a: 'Yes. All partnerships flow through Fractured Atlas, our 501(c)(3) fiscal sponsor. You will receive proper documentation.',
+    a: 'Yes. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor. You will receive proper documentation.',
   },
   {
     q: 'What do you do with the funds?',
@@ -79,7 +79,7 @@ const FAQ = [
   },
   {
     q: 'Can we pay in crypto?',
-    a: 'Yes. USDC on Base preferred. Check, wire, or card also fine via Fractured Atlas.',
+    a: 'Yes. USDC on Base preferred. Check, wire, or card also fine via New Media Commons.',
   },
 ];
 
@@ -104,7 +104,7 @@ export default async function DeckPage() {
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">ZAOstock Partners</h1>
           <p className="text-sm text-gray-400 max-w-xl mx-auto">
-            October 3, 2026. Franklin Street Parklet, Ellsworth Maine. 10 artists, one stage, all day. Part of the 9th Annual Art of Ellsworth. Run by The ZAO, a decentralized music community.
+            October 3, 2026. Franklin Street Parklet, Ellsworth Maine. Independent artists, one stage, all day. Part of the 9th Annual Art of Ellsworth. Run by The ZAO, a decentralized music community.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export default async function DeckPage() {
           <p className="text-xs text-[#f5a623] uppercase tracking-wider font-bold">How to commit</p>
           <ol className="text-sm text-gray-300 space-y-2">
             <li><strong className="text-white">1.</strong> Email Zaal with the track you want (Main Stage / Broadcast / Year-Round) and any custom asks.</li>
-            <li><strong className="text-white">2.</strong> We send a simple partner agreement + Fractured Atlas W-9 for tax docs.</li>
+            <li><strong className="text-white">2.</strong> We send a simple partner agreement + New Media Commons W-9 for tax docs.</li>
             <li><strong className="text-white">3.</strong> Partner contribution due by June 30 to lock printed materials.</li>
             <li><strong className="text-white">4.</strong> You ship your logo file by August 1 for all merch, stage, and broadcast use.</li>
             <li><strong className="text-white">5.</strong> Oct 3 - you are named on the stage, the broadcast, the website, and the day.</li>
@@ -185,7 +185,7 @@ export default async function DeckPage() {
           <ul className="text-sm text-gray-300 space-y-1">
             <li>- Heart of Ellsworth - Venue + Maine Craft Weekend promotion</li>
             <li>- Town of Ellsworth - Parklet venue</li>
-            <li>- Fractured Atlas - 501(c)(3) fiscal sponsor</li>
+            <li>- New Media Commons - 501(c)(3) fiscal sponsor</li>
             <li>- Black Moon Public House - Afterparty venue (30 seconds from the stage)</li>
           </ul>
           <p className="text-[11px] text-gray-500 italic pt-2">

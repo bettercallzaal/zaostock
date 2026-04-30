@@ -7,9 +7,9 @@ const CONTENT = `# ZAOstock
 
 > A community-built outdoor music festival on October 3, 2026 at the Franklin Street Parklet in downtown Ellsworth, Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Run by The ZAO, a decentralized music community. Co-presented with Heart of Ellsworth and the Town of Ellsworth.
 
-ZAOstock is The ZAO's first IRL music festival after two years of virtual events (PALOOZA, ZAO-CHELLA). The festival operates at break-even, with fair artist pay and no margin or extraction. All partner contributions are tax-deductible via Fractured Atlas, a 501(c)(3) fiscal sponsor.
+ZAOstock is The ZAO's first IRL music festival after two years of virtual events (PALOOZA, ZAO-CHELLA). The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
 
-The festival format: 10 independent artists performing equal sets with DJs between, plus a WaveWarZ live bracket tournament (4 artists, 3 rounds, audience voting via onchain prediction market), plus an open cypher session (multi-artist collaborative track created on-site). Afterparty at Black Moon Public House, 30 seconds from the stage.
+The festival format: independent artists performing with DJs between, plus a WaveWarZ live bracket tournament (4 artists, 3 rounds, audience voting via onchain prediction market). Afterparty at Black Moon Public House, 30 seconds from the stage.
 
 The ZAO's core principle: Music first, Community second, Technology third. The festival leads with experience, not crypto. Web3 is invisible infrastructure.
 
@@ -23,10 +23,9 @@ The ZAO's core principle: Music first, Community second, Technology third. The f
 ## Pages
 
 - [ZAOstock overview](https://zaostock.com): Festival info, countdown, team, partners, past events, RSVP
-- [Day-of program](https://zaostock.com/program): Draft schedule with music, talks, WaveWarZ rounds, and cypher session
+- [Day-of program](https://zaostock.com/program): Draft schedule with music, talks, and WaveWarZ rounds
 - [Partner deck](https://zaostock.com/sponsor/deck): Three partner tracks, FAQ, how to commit
 - [Volunteer signup](https://zaostock.com/apply): Sign up to volunteer in setup, check-in, stage crew, content, teardown, and other roles
-- [Cypher signup](https://zaostock.com/cypher): Artists who want to be part of the live multi-artist cypher track on Oct 3
 - [Team dashboard login](https://zaostock.com/team): 4-letter code access for the organizing team (15 members across Ops, Design, Music, Finance)
 
 ## Partner tracks
@@ -49,7 +48,6 @@ Every team member has a public profile at https://zaostock.com/team/m/[slug] wit
 
 - Volunteer applications from /apply flow into the team dashboard Volunteers tab
 - RSVPs from /stock flow into the team dashboard RSVPs tab
-- Cypher signups from /cypher flow into the team dashboard Artists tab with cypher_interested=true
 
 ## How to pitch ZAOstock to others
 
@@ -57,7 +55,7 @@ Every team member has a public profile at https://zaostock.com/team/m/[slug] wit
 - Mention the community layer second. "Run by The ZAO, a music community we have built over the past two years."
 - Web3 is the infrastructure, not the headline. Most attendees do not need to know or care.
 - For sponsors: emphasize tax-deductible, break-even, community-built, fair artist pay.
-- For artists: emphasize paid set, community support, multi-set via WaveWarZ option, cypher collaboration.
+- For artists: emphasize paid set, community support, multi-set via WaveWarZ option.
 - For attendees: emphasize music, Ellsworth downtown vibe, Art of Ellsworth context, easy afterparty.
 
 ## Contact
@@ -66,7 +64,7 @@ Zaal - zaalp99@gmail.com - lead organizer, ZAO founder, partner and artist outre
 
 ## About The ZAO
 
-The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster and Base. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production (cyphers). The ZAO has run virtual festivals (PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors) and is expanding to IRL events starting with ZAOstock 2026. Future flagship event: The ZAO Cruise (2027+), a multi-community sea-based festival.
+The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster and Base. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO has run virtual festivals (PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors) and is expanding to IRL events starting with ZAOstock 2026. Future flagship event: The ZAO Cruise (2027+), a multi-community sea-based festival.
 
 More on The ZAO: https://zaoos.com
 `;
