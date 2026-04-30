@@ -41,7 +41,7 @@ const SPONSOR_OFFERINGS = [
     'Post-event thank-you feature and recap',
     'Advisory seat for Year 2 planning',
     'Priority placement in 2027',
-    'Tax-deductible via Fractured Atlas 501(c)(3)',
+    'Tax-deductible via New Media Commons 501(c)(3)',
   ]},
 ];
 
@@ -59,7 +59,7 @@ const PAST_EVENTS = [
 const PARTNERS = [
   { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor', confirmed: true },
+  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
   { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
   { name: 'Wallace Events', role: 'Tent rental + weather backup', confirmed: false },
 ];
@@ -86,12 +86,6 @@ export default async function StockPage() {
               className="text-xs text-gray-400 hover:text-[#f5a623] transition-colors"
             >
               Program
-            </Link>
-            <Link
-              href="/cypher"
-              className="text-xs text-gray-400 hover:text-[#f5a623] transition-colors"
-            >
-              Cypher
             </Link>
             <Link
               href="/suggest"
@@ -135,7 +129,7 @@ export default async function StockPage() {
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">ZAOstock</h2>
           <p className="text-gray-400 text-lg max-w-md mx-auto">
-            A community-built outdoor music festival in Ellsworth, Maine. 10 artists. One stage. All day.
+            A community-built outdoor music festival in Ellsworth, Maine. Independent artists. One stage. All day.
           </p>
           <p className="text-sm text-gray-500">
             Franklin Street Parklet &middot; 12pm&ndash;6pm &middot; Part of Art of Ellsworth
@@ -153,8 +147,8 @@ export default async function StockPage() {
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-3">
             <p className="text-sm text-gray-300 leading-relaxed">
               ZAOstock is The ZAO&apos;s flagship IRL music festival &mdash; a full-day outdoor showcase at the
-              Franklin Street Parklet in downtown Ellsworth, Maine. Ten independent artists perform equal sets
-              with DJs between, followed by an after-party at Black Moon Public House (30 seconds away).
+              Franklin Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between,
+              followed by an after-party at Black Moon Public House (30 seconds away).
             </p>
             <p className="text-sm text-gray-300 leading-relaxed">
               Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend, ZAOstock brings the
@@ -185,7 +179,7 @@ export default async function StockPage() {
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Lineup</p>
           <div className="bg-[#0d1b2a] rounded-xl border border-white/[0.08] p-5 text-center">
             <p className="text-sm text-gray-300">Full lineup coming soon</p>
-            <p className="text-xs text-gray-500 mt-1">Artists performing equal sets with DJs between</p>
+            <p className="text-xs text-gray-500 mt-1">Independent artists with DJs between</p>
           </div>
         </section>
 
@@ -213,23 +207,6 @@ export default async function StockPage() {
                 <p className="text-xs text-gray-400 mt-1">{partner.role}</p>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Cypher CTA */}
-        <section className="space-y-3">
-          <p className="text-xs text-gray-500 uppercase tracking-wider px-1">The Cypher</p>
-          <div className="bg-gradient-to-br from-rose-500/10 via-purple-500/5 to-transparent rounded-xl p-5 border border-rose-500/30">
-            <p className="text-lg font-bold text-white">The ZAOstock Cypher</p>
-            <p className="text-sm text-gray-300 mt-1">
-              Multi-artist collaborative track, created live on-site. Vocalists trade verses, producers cook beats, instrumentalists add texture. Released as onchain music after the festival with full credits and share.
-            </p>
-            <Link
-              href="/cypher"
-              className="inline-block mt-3 bg-[#f5a623] hover:bg-[#ffd700] text-black font-bold rounded-lg px-4 py-2.5 text-sm transition-colors"
-            >
-              Sign up to be in the cypher -&gt;
-            </Link>
           </div>
         </section>
 
@@ -287,7 +264,7 @@ export default async function StockPage() {
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Partner With Us</p>
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
             <p className="text-sm text-gray-300 leading-relaxed">
-              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, web3 brands, and ecosystem partners. All contributions tax-deductible via Fractured Atlas 501(c)(3).
+              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, web3 brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
             </p>
             <p className="text-xs text-gray-500">
               Full deck on request &middot; Reach out to start the conversation

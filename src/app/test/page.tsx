@@ -26,12 +26,12 @@ const FACTS = [
   { label: 'Date', value: 'Oct 03 2026' },
   { label: 'Venue', value: 'Franklin St Parklet' },
   { label: 'Time', value: '12 PM - 6 PM' },
-  { label: 'Lineup', value: '10 Artists / 1 Stage' },
+  { label: 'Lineup', value: 'Independent Artists' },
   { label: 'Afterparty', value: 'Black Moon Public House' },
 ];
 
 const LINEUP_SLOTS = [
-  'TBA', 'TBA', 'DJ', 'TBA', 'TBA', 'CYPHER', 'TBA', 'DJ', 'TBA', 'TBA',
+  'TBA', 'TBA', 'DJ', 'TBA', 'TBA', 'TBA', 'DJ', 'TBA',
 ];
 
 const SPONSOR_OFFERINGS = [
@@ -64,7 +64,7 @@ const SPONSOR_OFFERINGS = [
       'Post-event thank-you feature and recap',
       'Advisory seat for Year 2 planning',
       'Priority placement in 2027',
-      'Tax-deductible via Fractured Atlas 501(c)(3)',
+      'Tax-deductible via New Media Commons 501(c)(3)',
     ],
   },
 ];
@@ -87,14 +87,13 @@ const PAST_EVENTS = [
 const PARTNERS = [
   { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor', confirmed: true },
+  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
   { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
   { name: 'Wallace Events', role: 'Tent rental + weather backup', confirmed: false },
 ];
 
 const NAV = [
   { href: '/program', label: 'Program' },
-  { href: '/cypher', label: 'Cypher' },
   { href: '/suggest', label: 'Suggest' },
   { href: '/apply', label: 'Volunteer' },
   { href: '/sponsor/deck', label: 'Partner' },
@@ -159,7 +158,7 @@ export default async function TestPage() {
             ZAO<span className="text-[#f5a623]">stock</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base sm:text-xl text-gray-300 leading-relaxed">
-            A community-built outdoor music festival in Ellsworth, Maine. Ten artists. One stage. All day.
+            A community-built outdoor music festival in Ellsworth, Maine. Independent artists. One stage. All day.
           </p>
           <div className="mt-10">
             <FactStrip facts={FACTS} />
@@ -201,7 +200,7 @@ export default async function TestPage() {
       {/* Lineup marquee */}
       <section className="my-12 sm:my-16">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 mb-6 flex items-baseline justify-between gap-4 flex-wrap">
-          <SectionHeader eyebrow="The Lineup" title="Ten artists. One stage." />
+          <SectionHeader eyebrow="The Lineup" title="Independent artists. One stage." />
           <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.2em]">
             Announced August 2026
           </span>
@@ -209,8 +208,7 @@ export default async function TestPage() {
         <LineupMarquee slots={LINEUP_SLOTS} speedSeconds={45} />
         <div className="max-w-7xl mx-auto px-5 sm:px-8 mt-6">
           <p className="text-sm text-gray-400 max-w-2xl">
-            Equal sets across the day. DJs between every act. The ZAOstock Cypher closes the night - one collaborative
-            track, recorded live, released onchain after the festival.
+            Independent artists with DJs between every act. Lineup announced August 2026.
           </p>
         </div>
       </section>
@@ -224,8 +222,8 @@ export default async function TestPage() {
               <div className="space-y-5 text-base sm:text-lg text-gray-300 leading-relaxed">
                 <p>
                   ZAOstock is The ZAO&apos;s flagship IRL music festival. A full-day outdoor showcase at the Franklin
-                  Street Parklet in downtown Ellsworth, Maine. Ten independent artists perform equal sets with DJs
-                  between, followed by an after-party at Black Moon Public House thirty seconds away.
+                  Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between,
+                  followed by an after-party at Black Moon Public House thirty seconds away.
                 </p>
                 <p>
                   Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend, ZAOstock brings the decentralized
@@ -262,50 +260,11 @@ export default async function TestPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
             <StatTile value="100%" label="Goes to artists + production" accent />
             <StatTile value="0%" label="Operator margin" />
-            <StatTile value="501(c)(3)" label="Tax-deductible via Fractured Atlas" />
+            <StatTile value="501(c)(3)" label="Tax-deductible via New Media Commons" />
           </div>
         </div>
       </section>
 
-      {/* Cypher: secondary hero */}
-      <section className="my-16 sm:my-24">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <div className="relative overflow-hidden border border-rose-500/30 bg-gradient-to-br from-rose-500/15 via-rose-500/5 to-transparent">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-8 sm:p-12">
-              <div className="lg:col-span-8">
-                <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-rose-400 tracking-[0.25em]">
-                  The Cypher
-                </span>
-                <h3
-                  className="font-bold tracking-tight mt-3"
-                  style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: 1 }}
-                >
-                  Multi-artist track. Live on-site. Onchain after.
-                </h3>
-                <p className="text-sm sm:text-base text-gray-300 mt-5 max-w-2xl leading-relaxed">
-                  Vocalists trade verses, producers cook beats, instrumentalists add texture. Released as onchain music
-                  after the festival with full credits and share to every contributor.
-                </p>
-                <Link
-                  href="/cypher"
-                  className="inline-block mt-6 bg-[#f5a623] hover:bg-[#ffd700] text-black font-bold font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.18em] px-6 py-4 transition-colors"
-                >
-                  Sign up for the cypher
-                </Link>
-              </div>
-              <div className="lg:col-span-4 flex items-center justify-center lg:justify-end">
-                <div
-                  className="font-bold tracking-[-0.04em] text-rose-400/30 select-none"
-                  style={{ fontSize: 'clamp(6rem, 14vw, 12rem)', lineHeight: 0.85 }}
-                  aria-hidden
-                >
-                  /CY
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Team */}
       <section id="team" className="my-16 sm:my-24 scroll-mt-24">
@@ -403,8 +362,8 @@ export default async function TestPage() {
           <SectionHeader eyebrow="Partner With Us" title="Three paths. No tiers." />
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-3xl mb-8">
             No Gold / Silver / Bronze. Partners get named credit for the role they play. Custom packages available for
-            local Ellsworth businesses, web3 brands, and ecosystem partners. All contributions tax-deductible via
-            Fractured Atlas 501(c)(3).
+            local Ellsworth businesses, web3 brands, and ecosystem partners. Tax-deductible donations supporting
+            ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
             {SPONSOR_OFFERINGS.map((g) => (
@@ -443,7 +402,7 @@ export default async function TestPage() {
             <PastEventCard
               year="2026"
               name="ZAOstock"
-              description="The first IRL chapter. Ten artists, one stage, all day in Ellsworth Maine."
+              description="The first IRL chapter. Independent artists, one stage, all day in Ellsworth Maine."
               hue="amber"
               status="upcoming"
             />

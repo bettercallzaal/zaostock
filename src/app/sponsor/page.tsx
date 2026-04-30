@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Sponsor ZAOstock | Community Music Festival',
   description:
-    'Partner with ZAOstock — a community-built outdoor music festival in Ellsworth, Maine. October 3, 2026. Tax-deductible via Fractured Atlas 501(c)(3).',
+    'Partner with ZAOstock — a community-built outdoor music festival in Ellsworth, Maine. October 3, 2026. Tax-deductible via New Media Commons 501(c)(3).',
   openGraph: {
     title: 'Sponsor ZAOstock | Community Music Festival',
     description:
@@ -34,7 +34,7 @@ const SPONSOR_TRACKS = [
       'Logo on zaostock.com (permanent)',
       'Featured in local press outreach (Ellsworth American, BDN)',
       'Wayfinding signage with your branding',
-      'Tax-deductible via Fractured Atlas 501(c)(3)',
+      'Tax-deductible via New Media Commons 501(c)(3)',
     ],
   },
   {
@@ -62,7 +62,7 @@ const SPONSOR_TRACKS = [
       'Priority placement at ZAOVille (DMV) and future city expansions',
       'Advisory board seat for founding ecosystem partners',
       'Year-round partnership with quarterly reports',
-      'Tax-deductible via Fractured Atlas 501(c)(3)',
+      'Tax-deductible via New Media Commons 501(c)(3)',
       'Multi-year commitment with first-pick renewal',
     ],
   },
@@ -133,7 +133,7 @@ export default function SponsorPage() {
           </h2>
           <p className="text-gray-400 text-lg leading-relaxed">
             A community-built outdoor music festival at the gateway to Acadia National Park.
-            10 independent artists. One stage. All day. Tax-deductible.
+            Independent artists. One stage. All day. Tax-deductible.
           </p>
         </div>
 
@@ -219,9 +219,9 @@ export default function SponsorPage() {
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Tax-Deductible</p>
           <div className="bg-gradient-to-r from-[#f5a623]/10 to-[#ffd700]/5 rounded-xl p-5 border border-[#f5a623]/30">
             <p className="text-sm text-gray-300 leading-relaxed">
-              ZAOstock is a fiscally sponsored project of Fractured Atlas, a 501(c)(3) public
-              charity. Contributions for the purposes of ZAOstock are tax-deductible to the extent
-              permitted by law.
+              ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a
+              501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be
+              tax-deductible to the extent allowed by law.
             </p>
           </div>
         </section>
@@ -262,7 +262,7 @@ export default function SponsorPage() {
               </div>
               <div>
                 <p className="text-gray-500 text-xs">Artists</p>
-                <p className="text-white font-medium">10 independent performers</p>
+                <p className="text-white font-medium">Independent performers</p>
               </div>
               <div>
                 <p className="text-gray-500 text-xs">Livestream</p>

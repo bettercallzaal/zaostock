@@ -5,6 +5,7 @@ import { CypherForm } from './CypherForm';
 export const metadata: Metadata = {
   title: 'ZAOstock Cypher | Live multi-artist session Oct 3',
   description: 'Sign up to be part of the ZAOstock cypher - a live multi-artist collaborative track created at the festival on October 3, 2026.',
+  robots: { index: false, follow: false },
 };
 
 export default function CypherPage() {

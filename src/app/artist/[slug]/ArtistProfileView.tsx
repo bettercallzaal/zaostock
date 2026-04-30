@@ -143,11 +143,6 @@ export function ArtistProfileView({ artist, canEdit, token }: Props) {
                 {STATUS_LABEL[artist.status] || artist.status}
               </span>
             )}
-            {artist.cypher_interested && (
-              <span className="text-[10px] font-bold px-2 py-1 rounded-full border uppercase bg-rose-500/10 text-rose-400 border-rose-500/30">
-                In the Cypher
-              </span>
-            )}
             {points > 0 && (
               <span className="text-[10px] font-bold px-2 py-1 rounded-full border uppercase bg-[#f5a623]/10 text-[#f5a623] border-[#f5a623]/30">
                 {points} ZAOfestivals Point{points === 1 ? '' : 's'}
@@ -330,7 +325,7 @@ export function ArtistProfileView({ artist, canEdit, token }: Props) {
 
       {!canEdit && (
         <p className="text-[11px] text-gray-600 italic text-center">
-          To edit this profile you need the claim link from your cypher signup confirmation.
+          To edit this profile you need the claim link from your artist signup confirmation.
         </p>
       )}
     </section>
