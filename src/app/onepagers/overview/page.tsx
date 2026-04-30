@@ -67,14 +67,13 @@ const PARTNERS: Partner[] = [
   { name: 'Town of Ellsworth', role: 'Venue partner — Franklin St Parklet', confirmed: true },
   { name: 'Heart of Ellsworth', role: 'Local promotion + Maine cultural ties', confirmed: true },
   { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'Wallace Events', role: 'Tents + weather backup', confirmed: false },
-  { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
-];
+  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
+].filter((p) => p.confirmed);
 
 const SPONSOR_TIERS = [
   {
     tier: 'Main Stage Partner',
-    range: '$10K-25K',
+    range: '$500+',
     perks: [
       'Named credit on stage banner + signage',
       'On-site booth or table space',
@@ -85,7 +84,7 @@ const SPONSOR_TIERS = [
   },
   {
     tier: 'Broadcast Partner',
-    range: '$5K-10K',
+    range: '$1,000+',
     perks: [
       'Named credit on festival website',
       'Livestream overlay credit',
@@ -96,7 +95,7 @@ const SPONSOR_TIERS = [
   },
   {
     tier: 'Year-Round Partner',
-    range: '$2.5K-5K',
+    range: '$5,000+',
     perks: [
       'Post-event thank-you feature + recap',
       'Advisory seat for Year 2 planning',
@@ -116,7 +115,7 @@ const HOW_TO = [
   {
     role: 'Sponsors',
     detail:
-      '$2.5K-25K range across 3 tiers. Local + national both welcome. Tax-deductible via New Media Commons.',
+      '$500+ across 3 tiers. Local + national both welcome. Tax-deductible donations via New Media Commons.',
     cta: { label: 'Partner deck', href: '/sponsor/deck' },
   },
   {

@@ -186,7 +186,7 @@ export default async function DeckPage() {
             <li>- Heart of Ellsworth - Venue + Maine Craft Weekend promotion</li>
             <li>- Town of Ellsworth - Parklet venue</li>
             <li>- New Media Commons - 501(c)(3) fiscal sponsor</li>
-            <li>- Black Moon Public House - Afterparty venue (30 seconds from the stage)</li>
+            <li>- ENTERACT - Technical build</li>
           </ul>
           <p className="text-[11px] text-gray-500 italic pt-2">
             Reach out to be the first named partner in 2026.

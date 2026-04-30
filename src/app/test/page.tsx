@@ -88,9 +88,8 @@ const PARTNERS = [
   { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
   { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
-  { name: 'Wallace Events', role: 'Tent rental + weather backup', confirmed: false },
-];
+  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
+].filter((p) => p.confirmed);
 
 const NAV = [
   { href: '/program', label: 'Program' },
@@ -280,19 +279,16 @@ export default async function TestPage() {
       {/* Partners */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="Partners" title="Confirmed + in conversation." />
+          <SectionHeader eyebrow="Partners" title="Building this together." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
             {PARTNERS.map((p) => (
-              <div
-                key={p.name}
-                className={`bg-[#0d1b2a] p-6 ${p.confirmed ? '' : 'opacity-70'}`}
-              >
+              <div key={p.name} className="bg-[#0d1b2a] p-6">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.2em] text-[#f5a623]">
-                    {p.confirmed ? 'Confirmed' : 'In conversation'}
+                    Confirmed
                   </span>
                   <span className="font-[family-name:var(--font-mono)] text-[10px] text-gray-600">
-                    {p.confirmed ? '/CFM' : '/PEND'}
+                    /CFM
                   </span>
                 </div>
                 <p className="font-bold text-white text-lg tracking-tight">{p.name}</p>
