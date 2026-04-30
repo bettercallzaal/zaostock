@@ -53,7 +53,7 @@ const PILLARS: Pillar[] = [
     number: '02',
     title: 'Community second',
     body:
-      'The ZAO is 188 members across 30+ countries. ZAOstock is the global community showing up for one local town: Ellsworth, Maine. Year 1 is about relationship.',
+      'The ZAO is 100+ members across 30+ countries. ZAOstock is the global community showing up for one local town: Ellsworth, Maine. Year 1 is about relationship.',
   },
   {
     number: '03',
@@ -281,7 +281,7 @@ export default async function OverviewOnePager() {
               </div>
               <p className="mt-2 text-sm leading-relaxed text-slate-300 print:text-slate-700">
                 <strong className="text-white print:text-slate-900">The ZAO</strong> (ZTalent
-                Artist Organization) is a decentralized music community: 188 members, 30+
+                Artist Organization) is a decentralized music community: 100+ members, 30+
                 countries, organized around fractals (weekly peer-ranked contribution rounds) and
                 a shared treasury.
               </p>
@@ -433,9 +433,9 @@ export default async function OverviewOnePager() {
           </h2>
           <ol className="mt-4 grid gap-3 sm:grid-cols-2">
             {[
-              'Show up locally. Meet the city, the venue, the music scene. Roddy at City Hall, Steve Peer in the basement, Black Moon out back.',
+              'Show up locally. Meet the city, the venue, the music scene. Roddy at City Hall, Steve Peer in the basement.',
               'Take care of the artists. Fair pay, real promo, real community. Open-call lineup, peer curation.',
-              'Document everything. Public log. Build in public. Newsletter every Friday.',
+              'Document everything. Public log. Build in public.',
               "Don't overscale. Capacity the venue + city are happy with. Year 2 earns the right to grow.",
             ].map((c, i) => (
               <li key={c} className="flex gap-3">
@@ -477,7 +477,6 @@ export default async function OverviewOnePager() {
                     zaostock.com
                   </Link>
                 </li>
-                <li>Newsletter: paragraph.com/@thezao</li>
                 <li>Farcaster: /thezao</li>
                 <li>X: @thezao_</li>
               </ul>

@@ -27,7 +27,6 @@ const FACTS = [
   { label: 'Venue', value: 'Franklin St Parklet' },
   { label: 'Time', value: '12 PM - 6 PM' },
   { label: 'Lineup', value: 'Independent Artists' },
-  { label: 'Afterparty', value: 'Black Moon Public House' },
 ];
 
 const LINEUP_SLOTS = [
@@ -176,7 +175,7 @@ export default async function TestPage() {
               Volunteer
             </Link>
             <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em] ml-2">
-              Free entry / Tickets TBA
+              Tickets required for parklet entry / Free to listen from outside
             </span>
           </div>
         </div>
@@ -221,8 +220,7 @@ export default async function TestPage() {
               <div className="space-y-5 text-base sm:text-lg text-gray-300 leading-relaxed">
                 <p>
                   ZAOstock is The ZAO&apos;s flagship IRL music festival. A full-day outdoor showcase at the Franklin
-                  Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between,
-                  followed by an after-party at Black Moon Public House thirty seconds away.
+                  Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between.
                 </p>
                 <p>
                   Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend, ZAOstock brings the decentralized
@@ -236,8 +234,6 @@ export default async function TestPage() {
                   { k: 'Location', v: 'Franklin St Parklet, Ellsworth ME' },
                   { k: 'Series', v: '9th Annual Art of Ellsworth' },
                   { k: 'Weekend', v: 'Maine Craft Weekend' },
-                  { k: 'Weather backup', v: 'Wallace Events tent' },
-                  { k: 'Afterparty', v: 'Black Moon Public House (30s walk)' },
                 ].map((row) => (
                   <div key={row.k} className="flex flex-col gap-1 pb-4 border-b border-white/[0.08]">
                     <dt className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">
@@ -344,7 +340,7 @@ export default async function TestPage() {
                 )}
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-5">
-                Limited capacity. First to know when tickets drop, the lineup is announced, and the after-party opens.
+                Limited capacity. First to know when tickets drop and the lineup is announced.
               </p>
               <RSVPForm eventSlug="zao-stock-2026" />
             </div>

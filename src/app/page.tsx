@@ -146,8 +146,7 @@ export default async function StockPage() {
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-3">
             <p className="text-sm text-gray-300 leading-relaxed">
               ZAOstock is The ZAO&apos;s flagship IRL music festival &mdash; a full-day outdoor showcase at the
-              Franklin Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between,
-              followed by an after-party at Black Moon Public House (30 seconds away).
+              Franklin Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between.
             </p>
             <p className="text-sm text-gray-300 leading-relaxed">
               Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend, ZAOstock brings the

@@ -67,7 +67,7 @@ const FAQ = [
   },
   {
     q: 'How many people show up?',
-    a: 'ZAOstock runs during Maine Craft Weekend, pulling steady foot traffic from visitors heading to Acadia National Park. We are also marketing to our 188-member community and partner networks. Target: several hundred attendees plus digital livestream reach.',
+    a: 'ZAOstock runs during Maine Craft Weekend, pulling steady foot traffic from visitors heading to Acadia National Park. We are also marketing to our 100+ member community and partner networks. Target: several hundred attendees plus digital livestream reach.',
   },
   {
     q: 'Can we customize the package?',

@@ -9,7 +9,7 @@ const CONTENT = `# ZAOstock
 
 ZAOstock is The ZAO's first IRL music festival after two years of virtual events (PALOOZA, ZAO-CHELLA). The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
 
-The festival format: independent artists performing with DJs between, plus a WaveWarZ live bracket tournament (4 artists, 3 rounds, audience voting via onchain prediction market). Afterparty at Black Moon Public House, 30 seconds from the stage.
+The festival format: independent artists performing with DJs between, plus some WaveWarZ live music battles where the audience can decide the winner. Afterparty venue TBA.
 
 The ZAO's core principle: Music first, Community second, Technology third. The festival leads with experience, not crypto. Web3 is invisible infrastructure.
 
@@ -23,7 +23,7 @@ The ZAO's core principle: Music first, Community second, Technology third. The f
 ## Pages
 
 - [ZAOstock overview](https://zaostock.com): Festival info, countdown, team, partners, past events, RSVP
-- [Day-of program](https://zaostock.com/program): Draft schedule with music, talks, and WaveWarZ rounds
+- [Day-of program](https://zaostock.com/program): Draft schedule with music, talks, and WaveWarZ battles
 - [Partner deck](https://zaostock.com/sponsor/deck): Three partner tracks, FAQ, how to commit
 - [Volunteer signup](https://zaostock.com/apply): Sign up to volunteer in setup, check-in, stage crew, content, teardown, and other roles
 - [Team dashboard login](https://zaostock.com/team): 4-letter code access for the organizing team (15 members across Ops, Design, Music, Finance)

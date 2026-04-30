@@ -257,10 +257,6 @@ export default function SponsorPage() {
                 <p className="text-white font-medium">Franklin Street Parklet</p>
               </div>
               <div>
-                <p className="text-gray-500 text-xs">After-Party</p>
-                <p className="text-white font-medium">Black Moon Public House</p>
-              </div>
-              <div>
                 <p className="text-gray-500 text-xs">Artists</p>
                 <p className="text-white font-medium">Independent performers</p>
               </div>
