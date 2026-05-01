@@ -4,6 +4,9 @@ import { CountdownTimer } from '@/components/CountdownTimer';
 import { RSVPForm } from './RSVPForm';
 import { getPublicMembers, getStockCounts, type PublicMember } from '@/lib/members';
 import { PublicTeamGrid } from './PublicTeamGrid';
+import { NoiseOverlay } from '@/components/festival/NoiseOverlay';
+import { AnimatedGradient } from '@/components/festival/AnimatedGradient';
+import { TagMarquee } from '@/components/festival/TagMarquee';
 
 export const dynamic = 'force-dynamic';
 
@@ -84,6 +87,8 @@ export default async function StockPage() {
 
   return (
     <div className="min-h-[100dvh] bg-[#0a1628] text-white pb-12">
+      <NoiseOverlay />
+      <AnimatedGradient />
       {/* Simple public header */}
       <header className="sticky top-0 z-40 bg-[#0a1628]/95 backdrop-blur-md border-b border-white/[0.06]">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -152,6 +157,37 @@ export default async function StockPage() {
           <CountdownTimer targetDate={FESTIVAL_DATE} eventName="ZAOstock" />
         </div>
 
+        {/* Photo strip — full-bleed inside the column */}
+        <div className="grid grid-cols-3 gap-2 -mx-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/zao/wavewarz-banner.jpg" alt="WaveWarZ stage Miami 2024" className="w-full h-24 object-cover rounded-lg border border-white/[0.08]" loading="lazy" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/zao/wavewarz-zaal.jpg" alt="Live cipher recording" className="w-full h-24 object-cover rounded-lg border border-white/[0.08]" loading="lazy" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/zao/zabal-art.jpeg" alt="ZABAL energy" className="w-full h-24 object-cover rounded-lg border border-white/[0.08]" loading="lazy" />
+        </div>
+        <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500 text-center -mt-4">
+          Live from ZAO-CHELLA Miami / WaveWarZ battles
+        </p>
+      </div>
+
+      {/* Festival vibes tag marquee — full-bleed */}
+      <TagMarquee
+        tags={[
+          'Independent artists',
+          'Year 1 in Maine',
+          'Oct 3 2026',
+          'Franklin St Parklet',
+          'Maine Craft Weekend',
+          'Art of Ellsworth',
+          'Free to listen',
+          'Community-built',
+          'Break-even',
+          'Run by The ZAO',
+        ]}
+      />
+
+      <div className="max-w-2xl mx-auto px-4 py-6 space-y-8">
         {/* About */}
         <section className="space-y-3">
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">About the Festival</p>
