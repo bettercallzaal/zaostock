@@ -49,12 +49,12 @@ const ZAO_FESTIVALS = [
   {
     name: 'ZAO-PALOOZA',
     when: 'NYC · Apr 2024',
-    description: 'IRL community meet-up in New York during NFT NYC. 12 artists, 6 new to onchain music. Volunteer-organized in 6 weeks. Broke even.',
+    description: 'Community meet-up in New York during NFT NYC. 12 artists. Volunteer-organized in six weeks. Broke even.',
   },
   {
     name: 'ZAO-CHELLA',
     when: 'Miami · Dec 2024',
-    description: 'IRL showcase in Wynwood during Art Basel Miami. 10 artists, AR art, trading cards, live WaveWarZ battle, on-site cipher recording.',
+    description: 'Showcase in Wynwood during Art Basel Miami. 10 artists, AR art, trading cards, live WaveWarZ battle, cipher recorded on-site.',
   },
   {
     name: 'ZAOville',

@@ -72,13 +72,13 @@ const PAST_EVENTS = [
   {
     year: 'NYC · Apr 2024',
     name: 'ZAO-PALOOZA',
-    description: 'IRL community meet-up during NFT NYC. 12 artists, 6 new to onchain music. Volunteer-organized in 6 weeks. Broke even.',
+    description: 'Community meet-up during NFT NYC. 12 artists. Volunteer-organized in six weeks. Broke even.',
     hue: 'rose' as const,
   },
   {
     year: 'Miami · Dec 2024',
     name: 'ZAO-CHELLA',
-    description: 'IRL showcase in Wynwood during Art Basel. 10 artists, AR art, trading cards, live WaveWarZ battle, on-site cipher recording.',
+    description: 'Showcase in Wynwood during Art Basel. 10 artists, AR art, trading cards, live WaveWarZ battle, cipher recorded on-site.',
     hue: 'indigo' as const,
   },
 ];
