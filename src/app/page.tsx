@@ -64,7 +64,7 @@ const ZAO_FESTIVALS = [
   {
     name: 'ZAOstock',
     when: 'Ellsworth ME · Oct 3 2026',
-    description: 'First standalone ZAO Festivals event. Community-built one-day outdoor music festival at the Franklin Street Parklet.',
+    description: 'Community-built one-day outdoor music festival at the Franklin Street Parklet. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend.',
   },
 ];
 

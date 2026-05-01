@@ -7,7 +7,7 @@ const CONTENT = `# ZAOstock
 
 > A community-built outdoor music festival on October 3, 2026 at the Franklin Street Parklet in downtown Ellsworth, Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Run by The ZAO, a decentralized music community. Co-presented with Heart of Ellsworth and the Town of Ellsworth.
 
-ZAOstock is the first standalone event in the ZAO Festivals series, after two conference-attached events (ZAO-PALOOZA at NFT NYC in April 2024, ZAO-CHELLA at Art Basel Miami in December 2024) and a co-hosted DMV runway event (ZAOville, July 2026, with DCoop). The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
+ZAOstock is the next event in the ZAO Festivals series, following ZAO-PALOOZA (NYC during NFT NYC, April 2024), ZAO-CHELLA (Miami Wynwood during Art Basel, December 2024), and the co-hosted ZAOville DMV runway event with DCoop (July 2026). ZAOstock takes place during Maine Craft Weekend as part of the 9th Annual Art of Ellsworth. The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
 
 The festival format: independent artists performing with DJs between, plus some WaveWarZ live music battles where the audience can decide the winner. Afterparty venue TBA.
 
@@ -64,7 +64,7 @@ Zaal - zaalp99@gmail.com - lead organizer, ZAO founder, partner and artist outre
 
 ## About The ZAO
 
-The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster, Base, and Solana. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series so far: ZAO-PALOOZA (NYC, NFT NYC 2024, 12 artists, broke even), ZAO-CHELLA (Miami Wynwood, Art Basel 2024, 10 artists, live WaveWarZ battle, cipher recorded on-site), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock as the first standalone one-day festival in October 2026.
+The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster, Base, and Solana. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series so far: ZAO-PALOOZA (NYC, NFT NYC 2024, 12 artists, broke even), ZAO-CHELLA (Miami Wynwood, Art Basel 2024, 10 artists, live WaveWarZ battle, cipher recorded on-site), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock as the one-day festival in Ellsworth Maine in October 2026.
 
 More on The ZAO: https://zaoos.com
 `;
