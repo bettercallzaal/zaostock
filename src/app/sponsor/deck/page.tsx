@@ -63,7 +63,7 @@ const FAQ = [
   },
   {
     q: 'Who is The ZAO?',
-    a: 'A decentralized music community on Farcaster and Base, active since 2023. We have run virtual festivals (PALOOZA, ZAO-CHELLA) for two years. ZAOstock 2026 is our first IRL festival. Co-presented with Heart of Ellsworth and the Town of Ellsworth.',
+    a: 'A decentralized music community on Farcaster and Base, active since 2023. We have run virtual festivals (ZAO-PALOOZA, ZAO-CHELLA) for two years and are co-hosting ZAOville in the DMV with DCoop in July 2026. ZAOstock 2026 is our Year 1 IRL flagship. Co-presented with Heart of Ellsworth and the Town of Ellsworth.',
   },
   {
     q: 'How many people show up?',

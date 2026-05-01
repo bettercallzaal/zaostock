@@ -7,7 +7,7 @@ const CONTENT = `# ZAOstock
 
 > A community-built outdoor music festival on October 3, 2026 at the Franklin Street Parklet in downtown Ellsworth, Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Run by The ZAO, a decentralized music community. Co-presented with Heart of Ellsworth and the Town of Ellsworth.
 
-ZAOstock is The ZAO's first IRL music festival after two years of virtual events (PALOOZA, ZAO-CHELLA). The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
+ZAOstock is The ZAO's flagship Year 1 IRL music festival in the ZAO Festivals series after two years of virtual events (ZAO-PALOOZA, ZAO-CHELLA) and a co-hosted DMV runway event (ZAOville, July 2026, with DCoop). The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
 
 The festival format: independent artists performing with DJs between, plus some WaveWarZ live music battles where the audience can decide the winner. Afterparty venue TBA.
 
@@ -64,7 +64,7 @@ Zaal - zaalp99@gmail.com - lead organizer, ZAO founder, partner and artist outre
 
 ## About The ZAO
 
-The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster and Base. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO has run virtual festivals (PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors) and is expanding to IRL events starting with ZAOstock 2026. Future flagship event: The ZAO Cruise (2027+), a multi-community sea-based festival.
+The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster and Base. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series includes virtual festivals (ZAO-PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock 2026 as the flagship IRL Year 1 launch in October.
 
 More on The ZAO: https://zaoos.com
 `;

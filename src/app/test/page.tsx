@@ -71,7 +71,7 @@ const SPONSOR_OFFERINGS = [
 const PAST_EVENTS = [
   {
     year: '2024',
-    name: 'PALOOZA',
+    name: 'ZAO-PALOOZA',
     description: "The ZAO's first virtual music festival. A celebration of independent artists in the Farcaster ecosystem.",
     hue: 'rose' as const,
   },
@@ -392,9 +392,16 @@ export default async function TestPage() {
               />
             ))}
             <PastEventCard
-              year="2026"
+              year="July 2026"
+              name="ZAOville"
+              description="ZAO Festivals helps host with DCoop in the DMV. The runway leading into ZAOstock."
+              hue="emerald"
+              status="upcoming"
+            />
+            <PastEventCard
+              year="Oct 2026"
               name="ZAOstock"
-              description="The first IRL chapter. Independent artists, one stage, all day in Ellsworth Maine."
+              description="Year 1 IRL flagship. Independent artists, one stage, all day in Ellsworth Maine."
               hue="amber"
               status="upcoming"
             />

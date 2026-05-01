@@ -78,7 +78,7 @@ const ADVISORS = [
 
 const PAST_PROOF = [
   {
-    name: 'ZAO-Chella',
+    name: 'ZAO-CHELLA',
     detail: 'Art Basel Miami, Dec 2024 - 10 Web3 artists, AR art, trading cards, Wynwood',
   },
   {

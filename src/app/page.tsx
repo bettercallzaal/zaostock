@@ -45,14 +45,26 @@ const SPONSOR_OFFERINGS = [
   ]},
 ];
 
-const PAST_EVENTS = [
+const ZAO_FESTIVALS = [
   {
-    name: 'PALOOZA',
+    name: 'ZAO-PALOOZA',
+    when: 'Past',
     description: 'The ZAO\'s first virtual music festival — a celebration of independent artists in the Farcaster ecosystem.',
   },
   {
     name: 'ZAO-CHELLA',
+    when: 'Past',
     description: 'A multi-day virtual music experience showcasing emerging talent from The ZAO community.',
+  },
+  {
+    name: 'ZAOville',
+    when: 'July 2026',
+    description: 'ZAO Festivals helps host with DCoop in the DMV — the runway leading into ZAOstock.',
+  },
+  {
+    name: 'ZAOstock',
+    when: 'Oct 3, 2026',
+    description: 'Year 1 IRL flagship — community-built outdoor music festival in Ellsworth, Maine.',
   },
 ];
 
@@ -287,15 +299,17 @@ export default async function StockPage() {
           </div>
         </section>
 
-        {/* Past Events */}
+        {/* ZAO Festivals series */}
         <section className="space-y-3">
-          <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Past Events</p>
+          <p className="text-xs text-gray-500 uppercase tracking-wider px-1">ZAO Festivals</p>
           <div className="space-y-3">
-            {PAST_EVENTS.map((event) => (
+            {ZAO_FESTIVALS.map((event) => (
               <div key={event.name} className="bg-[#0d1b2a] rounded-xl p-4 border border-white/[0.08]">
-                <p className="font-bold text-white">{event.name}</p>
+                <div className="flex items-baseline justify-between gap-2 flex-wrap">
+                  <p className="font-bold text-white">{event.name}</p>
+                  <span className="text-[10px] text-[#f5a623] uppercase tracking-wider">{event.when}</span>
+                </div>
                 <p className="text-sm text-gray-400 mt-1">{event.description}</p>
-                <p className="text-xs text-gray-600 mt-2">Photos coming soon</p>
               </div>
             ))}
           </div>
