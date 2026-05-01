@@ -11,6 +11,7 @@ import { TierPanel } from '@/components/festival/TierPanel';
 import { PastEventCard } from '@/components/festival/PastEventCard';
 import { StickyActionBar } from '@/components/festival/StickyActionBar';
 import { TeamMosaic } from '@/components/festival/TeamMosaic';
+import { NoiseOverlay } from '@/components/festival/NoiseOverlay';
 
 export const dynamic = 'force-dynamic';
 
@@ -103,6 +104,7 @@ export default async function TestPage() {
 
   return (
     <div className="min-h-[100dvh] bg-[#0a1628] text-white pb-24 sm:pb-12 font-[family-name:var(--font-display)]">
+      <NoiseOverlay />
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#0a1628]/95 backdrop-blur-md border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
@@ -248,13 +250,58 @@ export default async function TestPage() {
         </div>
       </section>
 
-      {/* Manifesto */}
+      {/* Manifesto + stats bento */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeader eyebrow="How We Run It" title="Built by the community, for the community." />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.12] border border-white/[0.12]">
-            <StatTile value="100%" label="Goes to artist pay + event materials" accent />
-            <StatTile value="501(c)(3)" label="Tax-deductible via New Media Commons" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.12] border border-white/[0.12]">
+            <StatTile value="100%" label="To artist pay + materials" accent />
+            <StatTile value="Oct 3" label="2026 festival day" />
+            <StatTile value="6 hrs" label="Noon to 6 PM" />
+            <StatTile value="Free" label="To listen from sidewalks" />
+          </div>
+        </div>
+      </section>
+
+      {/* Crossroads of Downeast - location pride */}
+      <section className="my-16 sm:my-24">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <SectionHeader eyebrow="Where" title="Crossroads of Downeast." />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
+            <div className="lg:col-span-5 space-y-4">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                Ellsworth sits at the gateway to Acadia National Park. Four million people drove through in 2025. Downtown just received National Historic Register designation.
+              </p>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                The Heart of Ellsworth ran 28 events in 2025 with 50+ sponsors. The infrastructure is here; we are plugging into it.
+              </p>
+              <dl className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4 border-t border-white/[0.08]">
+                <FactRow label="Visitors / yr" value="4M+" />
+                <FactRow label="Status" value="Historic Register" />
+                <FactRow label="Host series" value="Art of Ellsworth" />
+                <FactRow label="Year" value="9th annual" />
+              </dl>
+            </div>
+            <div className="lg:col-span-7 relative overflow-hidden border border-white/[0.12] bg-[#0d1b2a] aspect-[4/3] lg:aspect-auto group">
+              {/* Stylized map placeholder gradient — drop in actual map image when available */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a4d3a]/60 via-[#0d1b2a] to-[#0a1628] transition-transform duration-700 group-hover:scale-105">
+                <div className="absolute inset-0 opacity-[0.08]" style={{
+                  backgroundImage: 'radial-gradient(circle at 30% 40%, rgba(245,166,35,0.4) 0, transparent 50%), radial-gradient(circle at 70% 70%, rgba(244,63,94,0.3) 0, transparent 50%)',
+                }} />
+              </div>
+              <div className="absolute inset-0 flex flex-col justify-end p-6">
+                <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.25em] text-[#f5a623]">Ellsworth · Maine</p>
+                <p
+                  className="font-bold text-white tracking-tight mt-1"
+                  style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: 0.9 }}
+                >
+                  Franklin St Parklet
+                </p>
+                <p className="text-sm text-gray-300 mt-2 max-w-md">
+                  Where every car heading to Acadia National Park passes through.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -429,6 +476,17 @@ export default async function TestPage() {
       </footer>
 
       <StickyActionBar />
+    </div>
+  );
+}
+
+function FactRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <dt className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">
+        {label}
+      </dt>
+      <dd className="text-base text-white font-medium mt-0.5">{value}</dd>
     </div>
   );
 }
