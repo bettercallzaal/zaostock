@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { NoiseOverlay } from '@/components/festival/NoiseOverlay';
+import { AnimatedGradient } from '@/components/festival/AnimatedGradient';
 
 export const metadata: Metadata = {
   title: 'Sponsor ZAOstock | Community Music Festival',
@@ -97,7 +99,9 @@ const PAST_PROOF = [
 
 export default function SponsorPage() {
   return (
-    <div className="min-h-[100dvh] bg-[#0a1628] text-white pb-12">
+    <div className="relative min-h-[100dvh] bg-[#0a1628] text-white pb-12">
+      <NoiseOverlay />
+      <AnimatedGradient />
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#0a1628]/95 backdrop-blur-md border-b border-white/[0.06]">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">

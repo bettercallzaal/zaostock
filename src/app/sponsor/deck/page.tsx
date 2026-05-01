@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getStockCounts } from '@/lib/members';
+import { NoiseOverlay } from '@/components/festival/NoiseOverlay';
+import { AnimatedGradient } from '@/components/festival/AnimatedGradient';
 
 export const dynamic = 'force-dynamic';
 
@@ -87,7 +89,9 @@ export default async function DeckPage() {
   const counts = await getStockCounts();
 
   return (
-    <div className="min-h-[100dvh] bg-[#0a1628] text-white pb-12">
+    <div className="relative min-h-[100dvh] bg-[#0a1628] text-white pb-12">
+      <NoiseOverlay />
+      <AnimatedGradient />
       <header className="sticky top-0 z-40 bg-[#0a1628]/95 backdrop-blur-md border-b border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <Link href="/" className="text-xs text-gray-400 hover:text-[#f5a623]">
