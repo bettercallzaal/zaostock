@@ -59,7 +59,7 @@ const FAQ = [
   },
   {
     q: 'What do you do with the funds?',
-    a: 'Funds pay artists and organizers, cover travel, and buy what we need on the day. ZAOstock operates at break-even.',
+    a: 'Funds pay artists and organizers, cover travel, and buy materials for the event. ZAOstock operates at break-even.',
   },
   {
     q: 'Who is The ZAO?',
