@@ -64,7 +64,7 @@ Zaal - zaalp99@gmail.com - lead organizer, ZAO founder, partner and artist outre
 
 ## About The ZAO
 
-The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster and Base. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series includes virtual festivals (ZAO-PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock 2026 as the flagship IRL Year 1 launch in October.
+The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster, Base, and Solana. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series includes virtual festivals (ZAO-PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock 2026 as the flagship IRL Year 1 launch in October.
 
 More on The ZAO: https://zaoos.com
 `;
