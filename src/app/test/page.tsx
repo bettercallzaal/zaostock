@@ -16,6 +16,7 @@ import { ScrollEyebrow } from '@/components/festival/ScrollEyebrow';
 import { AnimatedGradient } from '@/components/festival/AnimatedGradient';
 import { TagMarquee } from '@/components/festival/TagMarquee';
 import { TiltCard } from '@/components/festival/TiltCard';
+import { VibesGrid } from '@/components/festival/VibesGrid';
 
 export const dynamic = 'force-dynamic';
 
@@ -270,6 +271,17 @@ export default async function TestPage() {
               </dl>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Vibes grid - photos from past ZAO events */}
+      <section className="my-16 sm:my-24">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <SectionHeader eyebrow="The vibe" title="Live from the last two years." />
+          <VibesGrid />
+          <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.2em] mt-5">
+            ZAO-PALOOZA NYC 2024 / ZAO-CHELLA Miami 2024 / WaveWarZ live battles
+          </p>
         </div>
       </section>
 
