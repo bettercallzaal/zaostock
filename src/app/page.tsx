@@ -179,7 +179,7 @@ export default async function StockPage() {
               <span className="text-xs bg-white/[0.04] border border-white/[0.08] rounded-full px-3 py-1 text-gray-300">Community-built</span>
             </div>
             <p className="text-xs text-gray-500 leading-relaxed">
-              ZAOstock is built by the community for the community. Every dollar raised covers artist and organizer pay, travel, materials, video, and streaming.
+              ZAOstock is built by the community for the community. Every dollar raised covers artist pay and materials for the event.
             </p>
           </div>
         </section>
