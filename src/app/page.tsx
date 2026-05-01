@@ -143,17 +143,9 @@ export default async function StockPage() {
         </div>
       </header>
 
-      {/* Hero with background image */}
+      {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/[0.06]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/zao/wavewarz-banner.jpg"
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.18] scale-110"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/70 via-[#0a1628]/85 to-[#0a1628]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f5a623]/[0.06] via-[#0a1628]/85 to-[#0a1628]" />
         <div className="relative max-w-2xl mx-auto px-4 py-12 text-center space-y-4">
           <div className="inline-block rounded-full bg-[#f5a623]/15 px-4 py-1.5 text-sm text-[#f5a623] font-medium border border-[#f5a623]/40 backdrop-blur-sm">
             October 3, 2026
@@ -189,18 +181,6 @@ export default async function StockPage() {
           <CountdownTimer targetDate={FESTIVAL_DATE} eventName="ZAOstock" />
         </div>
 
-        {/* Photo strip — full-bleed inside the column */}
-        <div className="grid grid-cols-3 gap-2 -mx-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/zao/wavewarz-banner.jpg" alt="WaveWarZ stage Miami 2024" className="w-full h-24 object-cover rounded-lg border border-white/[0.08]" loading="lazy" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/zao/wavewarz-zaal.jpg" alt="Live cipher recording" className="w-full h-24 object-cover rounded-lg border border-white/[0.08]" loading="lazy" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/zao/zabal-art.jpeg" alt="ZABAL energy" className="w-full h-24 object-cover rounded-lg border border-white/[0.08]" loading="lazy" />
-        </div>
-        <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500 text-center -mt-4">
-          Live from ZAO-CHELLA Miami / WaveWarZ battles
-        </p>
       </div>
 
       {/* Festival vibes tag marquee — full-bleed */}
