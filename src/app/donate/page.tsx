@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-const PAYPAL_URL = 'https://paypal.com/paypalme/bettercallzaal';
+const PAYPAL_URL = 'https://paypal.com/paypalme/zaalpanthaki';
 const GIVETH_URL = 'https://giveth.io/project/sustaining-zao-festivals-creativity-technology';
 const NMC_URL = process.env.NEXT_PUBLIC_NMC_DONATION_URL || '';
 
