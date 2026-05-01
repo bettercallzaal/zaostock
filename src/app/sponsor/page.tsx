@@ -39,7 +39,7 @@ const SPONSOR_TRACKS = [
   },
   {
     track: 'Virtual Partners',
-    subtitle: 'Web3 brands, DAOs, digital-native companies',
+    subtitle: 'Digital creator brands and digital-native companies',
     color: '#818cf8',
     benefits: [
       'Livestream overlay branding (YouTube, Twitch, ZAO OS)',
@@ -78,8 +78,8 @@ const ADVISORS = [
 
 const PAST_PROOF = [
   {
-    name: 'ZAO-Chella',
-    detail: 'Art Basel Miami, Dec 2024 - 10 Web3 artists, AR art, trading cards, Wynwood',
+    name: 'ZAO-CHELLA',
+    detail: 'Art Basel Miami, Dec 2024 - 16+ musicians, 100+ visual artists, 50+ music communities, ZAO HOUSE residency, Wynwood',
   },
   {
     name: 'COC Concertz',
@@ -87,7 +87,7 @@ const PAST_PROOF = [
   },
   {
     name: 'WaveWarZ',
-    detail: '795 music battles, 435 SOL ($37K+) volume, artists paid instantly onchain',
+    detail: '795 music battles, 435 SOL ($37K+) volume, artists paid instantly via Solana',
   },
   {
     name: 'ZAO Fractals',
@@ -255,10 +255,6 @@ export default function SponsorPage() {
               <div>
                 <p className="text-gray-500 text-xs">Venue</p>
                 <p className="text-white font-medium">Franklin Street Parklet</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-xs">After-Party</p>
-                <p className="text-white font-medium">Black Moon Public House</p>
               </div>
               <div>
                 <p className="text-gray-500 text-xs">Artists</p>

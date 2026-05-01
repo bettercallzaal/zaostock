@@ -37,7 +37,7 @@ export default function CypherPage() {
             A cypher is a multi-artist collaborative track built live. Vocalists trade verses, producers cook the beat on the spot, instrumentalists add texture. One track, many voices. It becomes the cultural artifact of the day.
           </p>
           <p className="text-sm text-gray-300 leading-relaxed">
-            The ZAOstock Cypher will be recorded, mixed, and released as onchain music after the festival. Every contributor gets credit and share.
+            The ZAOstock Cypher will be recorded, mixed, and released as digital music after the festival. Every contributor gets credit and share.
           </p>
         </div>
 

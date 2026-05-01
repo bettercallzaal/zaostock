@@ -27,7 +27,6 @@ const FACTS = [
   { label: 'Venue', value: 'Franklin St Parklet' },
   { label: 'Time', value: '12 PM - 6 PM' },
   { label: 'Lineup', value: 'Independent Artists' },
-  { label: 'Afterparty', value: 'Black Moon Public House' },
 ];
 
 const LINEUP_SLOTS = [
@@ -71,26 +70,25 @@ const SPONSOR_OFFERINGS = [
 
 const PAST_EVENTS = [
   {
-    year: '2024',
-    name: 'PALOOZA',
-    description: "The ZAO's first virtual music festival. A celebration of independent artists in the Farcaster ecosystem.",
+    year: 'NYC · Apr 2024',
+    name: 'ZAO-PALOOZA',
+    description: 'Community meet-up during NFT NYC. 12 artists. Volunteer-organized in six weeks. Broke even.',
     hue: 'rose' as const,
   },
   {
-    year: '2025',
+    year: 'Miami · Dec 2024',
     name: 'ZAO-CHELLA',
-    description: 'A multi-day virtual music experience showcasing emerging talent from The ZAO community.',
+    description: 'Showcase in Wynwood during Art Basel. 16+ musicians, 100+ visual artists, 50+ music communities. ZAO HOUSE artist residency. Live WaveWarZ battle, cipher recorded on-site.',
     hue: 'indigo' as const,
   },
 ];
 
 const PARTNERS = [
-  { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
+  { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
   { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
-  { name: 'Wallace Events', role: 'Tent rental + weather backup', confirmed: false },
-];
+  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
+].filter((p) => p.confirmed);
 
 const NAV = [
   { href: '/program', label: 'Program' },
@@ -177,7 +175,7 @@ export default async function TestPage() {
               Volunteer
             </Link>
             <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em] ml-2">
-              Free entry / Tickets TBA
+              Tickets required for parklet entry / Free to listen from outside
             </span>
           </div>
         </div>
@@ -222,8 +220,7 @@ export default async function TestPage() {
               <div className="space-y-5 text-base sm:text-lg text-gray-300 leading-relaxed">
                 <p>
                   ZAOstock is The ZAO&apos;s flagship IRL music festival. A full-day outdoor showcase at the Franklin
-                  Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between,
-                  followed by an after-party at Black Moon Public House thirty seconds away.
+                  Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between.
                 </p>
                 <p>
                   Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend, ZAOstock brings the decentralized
@@ -237,8 +234,6 @@ export default async function TestPage() {
                   { k: 'Location', v: 'Franklin St Parklet, Ellsworth ME' },
                   { k: 'Series', v: '9th Annual Art of Ellsworth' },
                   { k: 'Weekend', v: 'Maine Craft Weekend' },
-                  { k: 'Weather backup', v: 'Wallace Events tent' },
-                  { k: 'Afterparty', v: 'Black Moon Public House (30s walk)' },
                 ].map((row) => (
                   <div key={row.k} className="flex flex-col gap-1 pb-4 border-b border-white/[0.08]">
                     <dt className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">
@@ -256,10 +251,9 @@ export default async function TestPage() {
       {/* Manifesto */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="How We Run It" title="No margin. No extraction. Built by the community." />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
-            <StatTile value="100%" label="Goes to artists + production" accent />
-            <StatTile value="0%" label="Operator margin" />
+          <SectionHeader eyebrow="How We Run It" title="Built by the community, for the community." />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.12] border border-white/[0.12]">
+            <StatTile value="100%" label="Goes to artist pay + event materials" accent />
             <StatTile value="501(c)(3)" label="Tax-deductible via New Media Commons" />
           </div>
         </div>
@@ -280,19 +274,16 @@ export default async function TestPage() {
       {/* Partners */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="Partners" title="Confirmed + in conversation." />
+          <SectionHeader eyebrow="Partners" title="Building this together." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
             {PARTNERS.map((p) => (
-              <div
-                key={p.name}
-                className={`bg-[#0d1b2a] p-6 ${p.confirmed ? '' : 'opacity-70'}`}
-              >
+              <div key={p.name} className="bg-[#0d1b2a] p-6">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.2em] text-[#f5a623]">
-                    {p.confirmed ? 'Confirmed' : 'In conversation'}
+                    Confirmed
                   </span>
                   <span className="font-[family-name:var(--font-mono)] text-[10px] text-gray-600">
-                    {p.confirmed ? '/CFM' : '/PEND'}
+                    /CFM
                   </span>
                 </div>
                 <p className="font-bold text-white text-lg tracking-tight">{p.name}</p>
@@ -348,7 +339,7 @@ export default async function TestPage() {
                 )}
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-5">
-                Limited capacity. First to know when tickets drop, the lineup is announced, and the after-party opens.
+                Limited capacity. First to know when tickets drop and the lineup is announced.
               </p>
               <RSVPForm eventSlug="zao-stock-2026" />
             </div>
@@ -362,7 +353,7 @@ export default async function TestPage() {
           <SectionHeader eyebrow="Partner With Us" title="Three paths. No tiers." />
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-3xl mb-8">
             No Gold / Silver / Bronze. Partners get named credit for the role they play. Custom packages available for
-            local Ellsworth businesses, web3 brands, and ecosystem partners. Tax-deductible donations supporting
+            local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting
             ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
@@ -400,9 +391,16 @@ export default async function TestPage() {
               />
             ))}
             <PastEventCard
-              year="2026"
+              year="July 2026"
+              name="ZAOville"
+              description="DMV chapter co-hosted with DCoop (founder of The VEC; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup includes PROF!T, ELYVN, and more."
+              hue="emerald"
+              status="upcoming"
+            />
+            <PastEventCard
+              year="Oct 2026"
               name="ZAOstock"
-              description="The first IRL chapter. Independent artists, one stage, all day in Ellsworth Maine."
+              description="Community-built one-day festival in Ellsworth Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Independent artists, one stage, all day."
               hue="amber"
               status="upcoming"
             />

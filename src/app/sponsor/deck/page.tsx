@@ -29,7 +29,7 @@ const TRACKS = [
   {
     name: 'Broadcast Partner',
     range: '$1,000+',
-    fit: 'Web3 brands, tools, and ecosystem partners who want reach across Farcaster + streaming.',
+    fit: 'Digital creator brands, tools, and ecosystem partners who want reach across Farcaster + streaming.',
     credits: [
       'Named credit on festival website with backlink',
       'Livestream overlay credit',
@@ -59,15 +59,15 @@ const FAQ = [
   },
   {
     q: 'What do you do with the funds?',
-    a: 'Every dollar goes to artist pay, production, and keeping the festival accessible. ZAOstock operates at break-even. No margin, no extraction.',
+    a: 'Funds cover artist pay and materials for the event. ZAOstock operates at break-even.',
   },
   {
     q: 'Who is The ZAO?',
-    a: 'A decentralized music community on Farcaster and Base, active since 2023. We have run virtual festivals (PALOOZA, ZAO-CHELLA) for two years. ZAOstock 2026 is our first IRL festival. Co-presented with Heart of Ellsworth and the Town of Ellsworth.',
+    a: 'A decentralized music community on Farcaster, Base, and Solana, active since 2023. Two community events ran so far: ZAO-PALOOZA in NYC during NFT NYC, April 2024; ZAO-CHELLA in Miami during Art Basel, December 2024. ZAOville in the DMV is co-hosted with DCoop (founder of The Village Entertainment Collective) in July 2026 - cross-promotion across the series since DCoop performed at ZAO-CHELLA Miami 2024 and returns for ZAOstock. Lineup includes PROF!T, ELYVN, and more. ZAOstock 2026 is the next event - a one-day festival in Ellsworth Maine, part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Co-presented with Heart of Ellsworth and the Town of Ellsworth.',
   },
   {
     q: 'How many people show up?',
-    a: 'ZAOstock runs during Maine Craft Weekend, pulling steady foot traffic from visitors heading to Acadia National Park. We are also marketing to our 188-member community and partner networks. Target: several hundred attendees plus digital livestream reach.',
+    a: 'ZAOstock runs during Maine Craft Weekend, pulling steady foot traffic from visitors heading to Acadia National Park. We are also marketing to our 100+ member community and partner networks. Target: several hundred attendees plus digital livestream reach.',
   },
   {
     q: 'Can we customize the package?',
@@ -78,7 +78,7 @@ const FAQ = [
     a: 'We are locking partners by June 15, 2026 to hit print and digital deadlines. Earlier is better.',
   },
   {
-    q: 'Can we pay in crypto?',
+    q: 'Can we pay in USDC or stablecoins?',
     a: 'Yes. USDC on Base preferred. Check, wire, or card also fine via New Media Commons.',
   },
 ];
@@ -183,10 +183,10 @@ export default async function DeckPage() {
         <section className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
           <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Confirmed so far</p>
           <ul className="text-sm text-gray-300 space-y-1">
-            <li>- Heart of Ellsworth - Venue + Maine Craft Weekend promotion</li>
+            <li>- Heart of Ellsworth - Local promotion + Maine Craft Weekend coordination</li>
             <li>- Town of Ellsworth - Parklet venue</li>
             <li>- New Media Commons - 501(c)(3) fiscal sponsor</li>
-            <li>- Black Moon Public House - Afterparty venue (30 seconds from the stage)</li>
+            <li>- ENTERACT - Technical build</li>
           </ul>
           <p className="text-[11px] text-gray-500 italic pt-2">
             Reach out to be the first named partner in 2026.

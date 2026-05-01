@@ -53,13 +53,13 @@ const PILLARS: Pillar[] = [
     number: '02',
     title: 'Community second',
     body:
-      'The ZAO is 188 members across 30+ countries. ZAOstock is the global community showing up for one local town: Ellsworth, Maine. Year 1 is about relationship.',
+      'The ZAO is 100+ members across 20+ countries. ZAOstock is the global community showing up for one local town: Ellsworth, Maine. Year 1 is about relationship.',
   },
   {
     number: '03',
     title: 'Technology third',
     body:
-      'We use crypto, Farcaster, and decentralized tools because they make the work easier — not because they ARE the work. Tech serves the music. Always that order.',
+      'We use Farcaster, distribution platforms, and decentralized tools because they make the work easier for musicians and artists — not because they ARE the work. Tools serve the music. Always that order.',
   },
 ];
 
@@ -67,14 +67,13 @@ const PARTNERS: Partner[] = [
   { name: 'Town of Ellsworth', role: 'Venue partner — Franklin St Parklet', confirmed: true },
   { name: 'Heart of Ellsworth', role: 'Local promotion + Maine cultural ties', confirmed: true },
   { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'Wallace Events', role: 'Tents + weather backup', confirmed: false },
-  { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
-];
+  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
+].filter((p) => p.confirmed);
 
 const SPONSOR_TIERS = [
   {
     tier: 'Main Stage Partner',
-    range: '$10K-25K',
+    range: '$500+',
     perks: [
       'Named credit on stage banner + signage',
       'On-site booth or table space',
@@ -85,7 +84,7 @@ const SPONSOR_TIERS = [
   },
   {
     tier: 'Broadcast Partner',
-    range: '$5K-10K',
+    range: '$1,000+',
     perks: [
       'Named credit on festival website',
       'Livestream overlay credit',
@@ -96,7 +95,7 @@ const SPONSOR_TIERS = [
   },
   {
     tier: 'Year-Round Partner',
-    range: '$2.5K-5K',
+    range: '$5,000+',
     perks: [
       'Post-event thank-you feature + recap',
       'Advisory seat for Year 2 planning',
@@ -116,7 +115,7 @@ const HOW_TO = [
   {
     role: 'Sponsors',
     detail:
-      '$2.5K-25K range across 3 tiers. Local + national both welcome. Tax-deductible via New Media Commons.',
+      '$500+ across 3 tiers. Local + national both welcome. Tax-deductible donations via New Media Commons.',
     cta: { label: 'Partner deck', href: '/sponsor/deck' },
   },
   {
@@ -227,8 +226,8 @@ export default async function OverviewOnePager() {
             Music first. Community second. Technology third.
           </div>
           <p className="mt-2 text-sm text-slate-400 print:text-slate-600">
-            That order matters. Most music tech inverts it. We&rsquo;re music people who use
-            crypto, not crypto people who like music.
+            That order matters. We are digital creators focused on helping musicians and other
+            artists with distribution and support.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {PILLARS.map((p) => (
@@ -282,7 +281,7 @@ export default async function OverviewOnePager() {
               </div>
               <p className="mt-2 text-sm leading-relaxed text-slate-300 print:text-slate-700">
                 <strong className="text-white print:text-slate-900">The ZAO</strong> (ZTalent
-                Artist Organization) is a decentralized music community: 188 members, 30+
+                Artist Organization) is a decentralized music community: 100+ members, 30+
                 countries, organized around fractals (weekly peer-ranked contribution rounds) and
                 a shared treasury.
               </p>
@@ -434,9 +433,9 @@ export default async function OverviewOnePager() {
           </h2>
           <ol className="mt-4 grid gap-3 sm:grid-cols-2">
             {[
-              'Show up locally. Meet the city, the venue, the music scene. Roddy at City Hall, Steve Peer in the basement, Black Moon out back.',
+              'Show up locally. Meet the city, the venue, the music scene. Roddy at City Hall, Steve Peer in the basement.',
               'Take care of the artists. Fair pay, real promo, real community. Open-call lineup, peer curation.',
-              'Document everything. Public log. Build in public. Newsletter every Friday.',
+              'Document everything. Public log. Build in public.',
               "Don't overscale. Capacity the venue + city are happy with. Year 2 earns the right to grow.",
             ].map((c, i) => (
               <li key={c} className="flex gap-3">
@@ -478,7 +477,6 @@ export default async function OverviewOnePager() {
                     zaostock.com
                   </Link>
                 </li>
-                <li>Newsletter: paragraph.com/@thezao</li>
                 <li>Farcaster: /thezao</li>
                 <li>X: @thezao_</li>
               </ul>

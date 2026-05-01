@@ -45,24 +45,35 @@ const SPONSOR_OFFERINGS = [
   ]},
 ];
 
-const PAST_EVENTS = [
+const ZAO_FESTIVALS = [
   {
-    name: 'PALOOZA',
-    description: 'The ZAO\'s first virtual music festival — a celebration of independent artists in the Farcaster ecosystem.',
+    name: 'ZAO-PALOOZA',
+    when: 'NYC · Apr 2024',
+    description: 'Community meet-up in New York during NFT NYC. 12 artists. Volunteer-organized in six weeks. Broke even.',
   },
   {
     name: 'ZAO-CHELLA',
-    description: 'A multi-day virtual music experience showcasing emerging talent from The ZAO community.',
+    when: 'Miami · Dec 2024',
+    description: 'Showcase in Wynwood during Art Basel Miami. 16+ musicians, 100+ visual artists, 50+ music communities. ZAO HOUSE artist residency for performers and organizers. Live WaveWarZ battle, cipher recorded on-site.',
+  },
+  {
+    name: 'ZAOville',
+    when: 'DMV · Jul 2026',
+    description: 'DMV chapter co-hosted with DCoop (founder of The Village Entertainment Collective; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup includes PROF!T, ELYVN, and more.',
+  },
+  {
+    name: 'ZAOstock',
+    when: 'Ellsworth ME · Oct 3 2026',
+    description: 'Community-built one-day outdoor music festival at the Franklin Street Parklet. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend.',
   },
 ];
 
 const PARTNERS = [
-  { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
+  { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
   { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
-  { name: 'Black Moon Public House', role: 'After-party venue', confirmed: false },
-  { name: 'Wallace Events', role: 'Tent rental + weather backup', confirmed: false },
-];
+  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
+].filter((p) => p.confirmed);
 
 export default async function StockPage() {
   const [publicMembers, counts] = await Promise.all([
@@ -147,8 +158,7 @@ export default async function StockPage() {
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-3">
             <p className="text-sm text-gray-300 leading-relaxed">
               ZAOstock is The ZAO&apos;s flagship IRL music festival &mdash; a full-day outdoor showcase at the
-              Franklin Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between,
-              followed by an after-party at Black Moon Public House (30 seconds away).
+              Franklin Street Parklet in downtown Ellsworth, Maine. Independent artists perform with DJs between.
             </p>
             <p className="text-sm text-gray-300 leading-relaxed">
               Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend, ZAOstock brings the
@@ -169,7 +179,7 @@ export default async function StockPage() {
               <span className="text-xs bg-white/[0.04] border border-white/[0.08] rounded-full px-3 py-1 text-gray-300">Community-built</span>
             </div>
             <p className="text-xs text-gray-500 leading-relaxed">
-              ZAOstock is built by the community for the community. Every dollar raised goes to artists, production, and keeping the festival accessible. No margin, no extraction.
+              ZAOstock is built by the community for the community. Every dollar raised covers artist pay and materials for the event.
             </p>
           </div>
         </section>
@@ -264,7 +274,7 @@ export default async function StockPage() {
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Partner With Us</p>
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
             <p className="text-sm text-gray-300 leading-relaxed">
-              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, web3 brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
+              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
             </p>
             <p className="text-xs text-gray-500">
               Full deck on request &middot; Reach out to start the conversation
@@ -289,15 +299,17 @@ export default async function StockPage() {
           </div>
         </section>
 
-        {/* Past Events */}
+        {/* ZAO Festivals series */}
         <section className="space-y-3">
-          <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Past Events</p>
+          <p className="text-xs text-gray-500 uppercase tracking-wider px-1">ZAO Festivals</p>
           <div className="space-y-3">
-            {PAST_EVENTS.map((event) => (
+            {ZAO_FESTIVALS.map((event) => (
               <div key={event.name} className="bg-[#0d1b2a] rounded-xl p-4 border border-white/[0.08]">
-                <p className="font-bold text-white">{event.name}</p>
+                <div className="flex items-baseline justify-between gap-2 flex-wrap">
+                  <p className="font-bold text-white">{event.name}</p>
+                  <span className="text-[10px] text-[#f5a623] uppercase tracking-wider">{event.when}</span>
+                </div>
                 <p className="text-sm text-gray-400 mt-1">{event.description}</p>
-                <p className="text-xs text-gray-600 mt-2">Photos coming soon</p>
               </div>
             ))}
           </div>

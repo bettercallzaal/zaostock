@@ -7,11 +7,11 @@ const CONTENT = `# ZAOstock
 
 > A community-built outdoor music festival on October 3, 2026 at the Franklin Street Parklet in downtown Ellsworth, Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Run by The ZAO, a decentralized music community. Co-presented with Heart of Ellsworth and the Town of Ellsworth.
 
-ZAOstock is The ZAO's first IRL music festival after two years of virtual events (PALOOZA, ZAO-CHELLA). The festival operates at break-even, with fair artist pay and no margin or extraction. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
+ZAOstock is the next event in the ZAO Festivals series, following ZAO-PALOOZA (NYC during NFT NYC, April 2024), ZAO-CHELLA (Miami Wynwood during Art Basel, December 2024), and the co-hosted ZAOville DMV chapter with DCoop in July 2026. ZAOville is a cross-promotion across the series — DCoop performed at ZAO-CHELLA and returns for ZAOstock. ZAOville lineup includes PROF!T, ELYVN, and more. ZAOstock takes place during Maine Craft Weekend as part of the 9th Annual Art of Ellsworth. The festival operates at break-even with fair artist pay. ZAOstock programs are supported through fiscal sponsorship by New Media Commons, a 501(c)(3) public charity. Donations to New Media Commons in support of ZAOstock may be tax-deductible to the extent allowed by law.
 
-The festival format: independent artists performing with DJs between, plus a WaveWarZ live bracket tournament (4 artists, 3 rounds, audience voting via onchain prediction market). Afterparty at Black Moon Public House, 30 seconds from the stage.
+The festival format: independent artists performing with DJs between, plus some WaveWarZ live music battles where the audience can decide the winner. Afterparty venue TBA.
 
-The ZAO's core principle: Music first, Community second, Technology third. The festival leads with experience, not crypto. Web3 is invisible infrastructure.
+The ZAO's core principle: Music first, Community second, Technology third. The festival leads with the music experience. The ZAO are digital creators focused on helping musicians and other artists with distribution and support.
 
 ## Key dates
 
@@ -23,7 +23,7 @@ The ZAO's core principle: Music first, Community second, Technology third. The f
 ## Pages
 
 - [ZAOstock overview](https://zaostock.com): Festival info, countdown, team, partners, past events, RSVP
-- [Day-of program](https://zaostock.com/program): Draft schedule with music, talks, and WaveWarZ rounds
+- [Day-of program](https://zaostock.com/program): Draft schedule with music, talks, and WaveWarZ battles
 - [Partner deck](https://zaostock.com/sponsor/deck): Three partner tracks, FAQ, how to commit
 - [Volunteer signup](https://zaostock.com/apply): Sign up to volunteer in setup, check-in, stage crew, content, teardown, and other roles
 - [Team dashboard login](https://zaostock.com/team): 4-letter code access for the organizing team (15 members across Ops, Design, Music, Finance)
@@ -31,7 +31,7 @@ The ZAO's core principle: Music first, Community second, Technology third. The f
 ## Partner tracks
 
 - Main Stage Partner ($500-$2,500): Local Ellsworth and Maine businesses. Named credit on stage, booth space, co-presented in printed materials.
-- Broadcast Partner ($1,000-$5,000): Web3 brands and ecosystem partners. Livestream overlay, sponsored segment, social campaign across Farcaster + X + Bluesky + LinkedIn.
+- Broadcast Partner ($1,000-$5,000): Digital creator brands and ecosystem partners. Livestream overlay, sponsored segment, social campaign across Farcaster + X + Bluesky + LinkedIn.
 - Year-Round Partner ($5,000+): Strategic long-term partners. All Broadcast credits plus Year 2 advisory seat and priority 2027 placement.
 
 ## Team
@@ -53,7 +53,7 @@ Every team member has a public profile at https://zaostock.com/team/m/[slug] wit
 
 - Lead with the experience, not the tech. "Outdoor festival in Ellsworth Maine on Oct 3, part of Art of Ellsworth."
 - Mention the community layer second. "Run by The ZAO, a music community we have built over the past two years."
-- Web3 is the infrastructure, not the headline. Most attendees do not need to know or care.
+- Technology is the infrastructure, not the headline. Most attendees do not need to know or care.
 - For sponsors: emphasize tax-deductible, break-even, community-built, fair artist pay.
 - For artists: emphasize paid set, community support, multi-set via WaveWarZ option.
 - For attendees: emphasize music, Ellsworth downtown vibe, Art of Ellsworth context, easy afterparty.
@@ -64,7 +64,7 @@ Zaal - zaalp99@gmail.com - lead organizer, ZAO founder, partner and artist outre
 
 ## About The ZAO
 
-The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster and Base. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO has run virtual festivals (PALOOZA, ZAO-CHELLA, 53+ communities, 26 sponsors) and is expanding to IRL events starting with ZAOstock 2026. Future flagship event: The ZAO Cruise (2027+), a multi-community sea-based festival.
+The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster, Base, and Solana. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series so far: ZAO-PALOOZA (NYC, NFT NYC 2024, 12 artists, broke even), ZAO-CHELLA (Miami Wynwood, Art Basel 2024, 16+ musicians, 100+ visual artists, 50+ music communities, ZAO HOUSE residency, live WaveWarZ battle, cipher recorded on-site), the ZAOville DMV chapter in July 2026 co-hosted with DCoop (founder of The Village Entertainment Collective; performed at ZAO-CHELLA, returning for ZAOstock; lineup includes PROF!T, ELYVN, and more), and ZAOstock as the one-day festival in Ellsworth Maine in October 2026.
 
 More on The ZAO: https://zaoos.com
 `;

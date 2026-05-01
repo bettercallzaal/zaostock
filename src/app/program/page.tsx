@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'ZAOstock Program | October 3, 2026',
-  description: 'Day-of schedule for ZAOstock. Draft program with music sets, WaveWarZ bracket, and short talks throughout the day.',
+  description: 'Day-of schedule for ZAOstock. Draft program with music sets, WaveWarZ battles, and short talks throughout the day.',
 };
 
 interface Block {
@@ -18,20 +18,19 @@ const PROGRAM: Block[] = [
   { target: '12:15', type: 'MUSIC', label: 'Opening set', detail: 'First artist of the day, 25-30 minutes.' },
   { target: '~12:50', type: 'TALK', label: 'Welcome to ZAOstock', detail: '5-10 minutes. What this is and why we built it.' },
   { target: '~13:05', type: 'MUSIC', label: 'Artist 2', detail: '15-20 minute set.' },
-  { target: '~13:35', type: 'TALK', label: 'Web3 music 101', detail: '5-10 minutes. Why onchain music matters, pitched for IRL audience.' },
+  { target: '~13:35', type: 'TALK', label: 'Music distribution 101', detail: '5-10 minutes. Why digital distribution matters for independent artists, pitched for IRL audience.' },
   { target: '~13:50', type: 'MUSIC', label: 'Artist 3', detail: '15-20 minute set.' },
   { target: '~14:20', type: 'BREAK', label: 'Mid-day break', detail: '15 minutes. Food trucks, bathrooms, mingle.' },
   { target: '~14:35', type: 'MUSIC', label: 'Artist 4', detail: '20-30 minute set.' },
-  { target: '~15:10', type: 'BATTLE', label: 'WaveWarZ Round 1', detail: 'Four artists, five minutes each. Audience votes live via QR code.' },
-  { target: '~15:45', type: 'DJ', label: 'Vote break', detail: 'Votes tally, DJ bridges.' },
-  { target: '~15:55', type: 'BATTLE', label: 'WaveWarZ Semi-Final', detail: 'Top two from Round 1, 7-8 minutes each.' },
-  { target: '~16:15', type: 'TALK', label: 'The ZAO community', detail: '5-10 minutes. How to join, what ZAO is.' },
-  { target: '~16:25', type: 'MUSIC', label: 'Artist 4', detail: '15 minute set.' },
+  { target: '~15:10', type: 'BATTLE', label: 'WaveWarZ battle', detail: 'Two artists go head-to-head. Audience decides the winner.' },
+  { target: '~15:45', type: 'DJ', label: 'DJ bridge', detail: 'Music keeps going while we reset the stage.' },
+  { target: '~16:00', type: 'MUSIC', label: 'Artist set', detail: 'Independent artist set.' },
+  { target: '~16:30', type: 'TALK', label: 'The ZAO community', detail: '5-10 minutes. How to join, what ZAO is.' },
   { target: '~16:45', type: 'TALK', label: 'Partners and Year 2', detail: '5-10 minutes. Thank-you and preview of 2027.' },
-  { target: '~16:55', type: 'BATTLE', label: 'WaveWarZ Final', detail: 'Two finalists, 10 minutes each.' },
-  { target: '~17:25', type: 'DJ', label: 'Final voting', detail: 'Winner announced.' },
-  { target: '~17:30', type: 'MUSIC', label: 'Closing set', detail: 'WaveWarZ winner (or special guest), 25-30 minutes.' },
-  { target: '~17:55', type: 'DJ', label: 'Afterparty call', detail: 'Wind down. Head to Black Moon Public House next door.' },
+  { target: '~16:55', type: 'BATTLE', label: 'WaveWarZ battle', detail: 'Two artists go head-to-head. Audience decides the winner.' },
+  { target: '~17:25', type: 'DJ', label: 'DJ bridge', detail: 'Stage reset.' },
+  { target: '~17:30', type: 'MUSIC', label: 'Closing set', detail: 'Special guest, 25-30 minutes.' },
+  { target: '~17:55', type: 'DJ', label: 'Wind down', detail: 'Closing DJ set. Afterparty venue TBA.' },
 ];
 
 const TYPE_COLOR: Record<Block['type'], string> = {
@@ -61,7 +60,7 @@ export default function ProgramPage() {
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Day-of Schedule</h1>
           <p className="text-sm text-gray-400 max-w-lg mx-auto">
-            Fluid pacing. Music, talks, and the WaveWarZ bracket flow together with 5-10 minutes of breathing room between blocks. Times are approximate targets, not hard clocks.
+            Fluid pacing. Music, talks, and WaveWarZ battles flow together with 5-10 minutes of breathing room between blocks. Times are approximate targets, not hard clocks.
           </p>
         </div>
 
@@ -98,7 +97,7 @@ export default function ProgramPage() {
         <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-3">
           <p className="text-xs text-[#f5a623] uppercase tracking-wider font-bold">What is WaveWarZ</p>
           <p className="text-sm text-gray-300 leading-relaxed">
-            WaveWarZ is a live music bracket tournament. Four artists compete across three rounds. After each round the audience votes via QR code on an onchain prediction market. The winner takes the 30-minute closing set of the day. Built on the ZAO&apos;s own prediction market infrastructure.
+            WaveWarZ is a live music battle. Two artists go head-to-head and the audience decides the winner. Expect a couple of WaveWarZ battles across the day.
           </p>
         </div>
 
@@ -107,7 +106,7 @@ export default function ProgramPage() {
           <ul className="text-sm text-gray-300 space-y-1.5">
             <li>- Full lineup announces August 2026.</li>
             <li>- Weather: tent coverage via Wallace Events, rain or shine.</li>
-            <li>- Afterparty at Black Moon Public House, 30 seconds from the stage.</li>
+            <li>- Afterparty venue TBA.</li>
             <li>- This schedule is a draft. Final version locks September 2026.</li>
           </ul>
         </div>
