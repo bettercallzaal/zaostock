@@ -183,7 +183,7 @@ export default async function DeckPage() {
         <section className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
           <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Confirmed so far</p>
           <ul className="text-sm text-gray-300 space-y-1">
-            <li>- Heart of Ellsworth - Venue + Maine Craft Weekend promotion</li>
+            <li>- Heart of Ellsworth - Local promotion + Maine Craft Weekend coordination</li>
             <li>- Town of Ellsworth - Parklet venue</li>
             <li>- New Media Commons - 501(c)(3) fiscal sponsor</li>
             <li>- ENTERACT - Technical build</li>

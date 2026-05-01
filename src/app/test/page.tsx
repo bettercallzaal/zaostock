@@ -84,7 +84,7 @@ const PAST_EVENTS = [
 ];
 
 const PARTNERS = [
-  { name: 'Heart of Ellsworth', role: 'Venue + MCW statewide promotion', confirmed: true },
+  { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
   { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
   { name: 'ENTERACT', role: 'Technical build', confirmed: true },
