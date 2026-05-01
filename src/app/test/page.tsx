@@ -253,7 +253,7 @@ export default async function TestPage() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeader eyebrow="How We Run It" title="Built by the community, for the community." />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.12] border border-white/[0.12]">
-            <StatTile value="100%" label="Goes to artists, organizers, travel, materials" accent />
+            <StatTile value="100%" label="Goes to artist pay + event materials" accent />
             <StatTile value="501(c)(3)" label="Tax-deductible via New Media Commons" />
           </div>
         </div>
