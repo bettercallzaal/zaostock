@@ -53,7 +53,7 @@ const PILLARS: Pillar[] = [
     number: '02',
     title: 'Community second',
     body:
-      'The ZAO is 100+ members across 30+ countries. ZAOstock is the global community showing up for one local town: Ellsworth, Maine. Year 1 is about relationship.',
+      'The ZAO is 100+ members across 20+ countries. ZAOstock is the global community showing up for one local town: Ellsworth, Maine. Year 1 is about relationship.',
   },
   {
     number: '03',
