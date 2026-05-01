@@ -48,23 +48,23 @@ const SPONSOR_OFFERINGS = [
 const ZAO_FESTIVALS = [
   {
     name: 'ZAO-PALOOZA',
-    when: 'Past',
-    description: 'The ZAO\'s first virtual music festival — a celebration of independent artists in the Farcaster ecosystem.',
+    when: 'NYC · Apr 2024',
+    description: 'IRL community meet-up in New York during NFT NYC. 12 artists, 6 new to onchain music. Volunteer-organized in 6 weeks. Broke even.',
   },
   {
     name: 'ZAO-CHELLA',
-    when: 'Past',
-    description: 'A multi-day virtual music experience showcasing emerging talent from The ZAO community.',
+    when: 'Miami · Dec 2024',
+    description: 'IRL showcase in Wynwood during Art Basel Miami. 10 artists, AR art, trading cards, live WaveWarZ battle, on-site cipher recording.',
   },
   {
     name: 'ZAOville',
-    when: 'July 2026',
+    when: 'DMV · Jul 2026',
     description: 'ZAO Festivals helps host with DCoop in the DMV — the runway leading into ZAOstock.',
   },
   {
     name: 'ZAOstock',
-    when: 'Oct 3, 2026',
-    description: 'Year 1 IRL flagship — community-built outdoor music festival in Ellsworth, Maine.',
+    when: 'Ellsworth ME · Oct 3 2026',
+    description: 'First standalone ZAO Festivals weekend. Community-built outdoor music festival at the Franklin Street Parklet.',
   },
 ];
 

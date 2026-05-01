@@ -70,15 +70,15 @@ const SPONSOR_OFFERINGS = [
 
 const PAST_EVENTS = [
   {
-    year: '2024',
+    year: 'NYC · Apr 2024',
     name: 'ZAO-PALOOZA',
-    description: "The ZAO's first virtual music festival. A celebration of independent artists in the Farcaster ecosystem.",
+    description: 'IRL community meet-up during NFT NYC. 12 artists, 6 new to onchain music. Volunteer-organized in 6 weeks. Broke even.',
     hue: 'rose' as const,
   },
   {
-    year: '2025',
+    year: 'Miami · Dec 2024',
     name: 'ZAO-CHELLA',
-    description: 'A multi-day virtual music experience showcasing emerging talent from The ZAO community.',
+    description: 'IRL showcase in Wynwood during Art Basel. 10 artists, AR art, trading cards, live WaveWarZ battle, on-site cipher recording.',
     hue: 'indigo' as const,
   },
 ];
@@ -401,7 +401,7 @@ export default async function TestPage() {
             <PastEventCard
               year="Oct 2026"
               name="ZAOstock"
-              description="Year 1 IRL flagship. Independent artists, one stage, all day in Ellsworth Maine."
+              description="First standalone ZAO Festivals weekend. Independent artists, one stage, all day in Ellsworth Maine."
               hue="amber"
               status="upcoming"
             />
