@@ -51,23 +51,31 @@ export default function DonatePage() {
           </p>
         </div>
 
-        {/* Amount preset */}
+        {/* Amount preset - one-click PayPal with preset amount */}
         <section className="bg-[#0d1b2a] border border-white/[0.08] rounded-2xl p-5">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold mb-3">
-            Pick a starting amount
-          </p>
+          <div className="flex items-baseline justify-between mb-3">
+            <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">
+              One-tap fiat
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[#f5a623]">
+              PayPal preset &rarr;
+            </p>
+          </div>
           <div className="grid grid-cols-4 gap-2">
             {PRESETS.map((n) => (
-              <div
+              <a
                 key={n}
-                className="bg-[#0a1628] border border-white/[0.12] rounded-lg px-3 py-3 text-center font-bold text-white"
+                href={`${PAYPAL_URL}/${n}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#0a1628] border border-white/[0.12] hover:border-[#f5a623] hover:bg-[#f5a623]/10 hover:scale-[1.03] rounded-lg px-3 py-3 text-center font-bold text-white transition-all"
               >
                 ${n}
-              </div>
+              </a>
             ))}
           </div>
           <p className="text-[11px] text-gray-500 mt-3">
-            Both paths below let you set any custom amount on the next screen.
+            Tap an amount to open PayPal pre-filled. Crypto + custom amounts below.
           </p>
         </section>
 
@@ -143,7 +151,7 @@ export default function DonatePage() {
           <TrustTile label="100%" sub="To project operations" />
           <TrustTile label="0 fees" sub="No platform cut on Giveth" />
           <TrustTile label="Verified" sub="Giveth project (since 2024)" />
-          <TrustTile label="Break-even" sub="No margin, no extraction" />
+          <TrustTile label="Break-even" sub="Fair pay, run at cost" />
         </section>
 
         {/* Stats bento - what's been raised + what's coming */}
