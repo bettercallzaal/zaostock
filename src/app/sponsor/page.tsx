@@ -79,7 +79,7 @@ const ADVISORS = [
 const PAST_PROOF = [
   {
     name: 'ZAO-CHELLA',
-    detail: 'Art Basel Miami, Dec 2024 - 10 digital artists, AR art, trading cards, Wynwood',
+    detail: 'Art Basel Miami, Dec 2024 - 16+ musicians, 100+ visual artists, 50+ music communities, ZAO HOUSE residency, Wynwood',
   },
   {
     name: 'COC Concertz',

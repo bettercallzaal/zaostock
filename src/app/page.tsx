@@ -54,7 +54,7 @@ const ZAO_FESTIVALS = [
   {
     name: 'ZAO-CHELLA',
     when: 'Miami · Dec 2024',
-    description: 'Showcase in Wynwood during Art Basel Miami. 10 artists, AR art, trading cards, live WaveWarZ battle, cipher recorded on-site.',
+    description: 'Showcase in Wynwood during Art Basel Miami. 16+ musicians, 100+ visual artists, 50+ music communities. ZAO HOUSE artist residency for performers and organizers. Live WaveWarZ battle, cipher recorded on-site.',
   },
   {
     name: 'ZAOville',

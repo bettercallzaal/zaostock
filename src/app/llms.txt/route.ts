@@ -64,7 +64,7 @@ Zaal - zaalp99@gmail.com - lead organizer, ZAO founder, partner and artist outre
 
 ## About The ZAO
 
-The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster, Base, and Solana. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series so far: ZAO-PALOOZA (NYC, NFT NYC 2024, 12 artists, broke even), ZAO-CHELLA (Miami Wynwood, Art Basel 2024, 10 artists, live WaveWarZ battle, cipher recorded on-site), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock as the one-day festival in Ellsworth Maine in October 2026.
+The ZAO (ZTalent Artist Organization) is a decentralized music community on Farcaster, Base, and Solana. It functions as a coordination layer for independent musicians: providing infrastructure, events, and collaborative IP production. The ZAO Festivals series so far: ZAO-PALOOZA (NYC, NFT NYC 2024, 12 artists, broke even), ZAO-CHELLA (Miami Wynwood, Art Basel 2024, 16+ musicians, 100+ visual artists, 50+ music communities, ZAO HOUSE residency, live WaveWarZ battle, cipher recorded on-site), the ZAOville DMV runway event in July 2026 co-hosted with DCoop, and ZAOstock as the one-day festival in Ellsworth Maine in October 2026.
 
 More on The ZAO: https://zaoos.com
 `;

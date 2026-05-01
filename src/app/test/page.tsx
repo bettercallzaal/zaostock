@@ -78,7 +78,7 @@ const PAST_EVENTS = [
   {
     year: 'Miami · Dec 2024',
     name: 'ZAO-CHELLA',
-    description: 'Showcase in Wynwood during Art Basel. 10 artists, AR art, trading cards, live WaveWarZ battle, cipher recorded on-site.',
+    description: 'Showcase in Wynwood during Art Basel. 16+ musicians, 100+ visual artists, 50+ music communities. ZAO HOUSE artist residency. Live WaveWarZ battle, cipher recorded on-site.',
     hue: 'indigo' as const,
   },
 ];
