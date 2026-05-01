@@ -274,7 +274,7 @@ export default async function StockPage() {
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Partner With Us</p>
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
             <p className="text-sm text-gray-300 leading-relaxed">
-              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, web3 brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
+              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
             </p>
             <p className="text-xs text-gray-500">
               Full deck on request &middot; Reach out to start the conversation

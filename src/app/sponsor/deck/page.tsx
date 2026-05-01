@@ -29,7 +29,7 @@ const TRACKS = [
   {
     name: 'Broadcast Partner',
     range: '$1,000+',
-    fit: 'Web3 brands, tools, and ecosystem partners who want reach across Farcaster + streaming.',
+    fit: 'Digital creator brands, tools, and ecosystem partners who want reach across Farcaster + streaming.',
     credits: [
       'Named credit on festival website with backlink',
       'Livestream overlay credit',
@@ -78,7 +78,7 @@ const FAQ = [
     a: 'We are locking partners by June 15, 2026 to hit print and digital deadlines. Earlier is better.',
   },
   {
-    q: 'Can we pay in crypto?',
+    q: 'Can we pay in USDC or stablecoins?',
     a: 'Yes. USDC on Base preferred. Check, wire, or card also fine via New Media Commons.',
   },
 ];

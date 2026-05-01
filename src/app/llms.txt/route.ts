@@ -11,7 +11,7 @@ ZAOstock is The ZAO's flagship Year 1 IRL music festival in the ZAO Festivals se
 
 The festival format: independent artists performing with DJs between, plus some WaveWarZ live music battles where the audience can decide the winner. Afterparty venue TBA.
 
-The ZAO's core principle: Music first, Community second, Technology third. The festival leads with experience, not crypto. Web3 is invisible infrastructure.
+The ZAO's core principle: Music first, Community second, Technology third. The festival leads with the music experience. The ZAO are digital creators focused on helping musicians and other artists with distribution and support.
 
 ## Key dates
 
@@ -31,7 +31,7 @@ The ZAO's core principle: Music first, Community second, Technology third. The f
 ## Partner tracks
 
 - Main Stage Partner ($500-$2,500): Local Ellsworth and Maine businesses. Named credit on stage, booth space, co-presented in printed materials.
-- Broadcast Partner ($1,000-$5,000): Web3 brands and ecosystem partners. Livestream overlay, sponsored segment, social campaign across Farcaster + X + Bluesky + LinkedIn.
+- Broadcast Partner ($1,000-$5,000): Digital creator brands and ecosystem partners. Livestream overlay, sponsored segment, social campaign across Farcaster + X + Bluesky + LinkedIn.
 - Year-Round Partner ($5,000+): Strategic long-term partners. All Broadcast credits plus Year 2 advisory seat and priority 2027 placement.
 
 ## Team
@@ -53,7 +53,7 @@ Every team member has a public profile at https://zaostock.com/team/m/[slug] wit
 
 - Lead with the experience, not the tech. "Outdoor festival in Ellsworth Maine on Oct 3, part of Art of Ellsworth."
 - Mention the community layer second. "Run by The ZAO, a music community we have built over the past two years."
-- Web3 is the infrastructure, not the headline. Most attendees do not need to know or care.
+- Technology is the infrastructure, not the headline. Most attendees do not need to know or care.
 - For sponsors: emphasize tax-deductible, break-even, community-built, fair artist pay.
 - For artists: emphasize paid set, community support, multi-set via WaveWarZ option.
 - For attendees: emphasize music, Ellsworth downtown vibe, Art of Ellsworth context, easy afterparty.

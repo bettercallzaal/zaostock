@@ -59,7 +59,7 @@ const PILLARS: Pillar[] = [
     number: '03',
     title: 'Technology third',
     body:
-      'We use crypto, Farcaster, and decentralized tools because they make the work easier — not because they ARE the work. Tech serves the music. Always that order.',
+      'We use Farcaster, distribution platforms, and decentralized tools because they make the work easier for musicians and artists — not because they ARE the work. Tools serve the music. Always that order.',
   },
 ];
 
@@ -226,8 +226,8 @@ export default async function OverviewOnePager() {
             Music first. Community second. Technology third.
           </div>
           <p className="mt-2 text-sm text-slate-400 print:text-slate-600">
-            That order matters. Most music tech inverts it. We&rsquo;re music people who use
-            crypto, not crypto people who like music.
+            That order matters. We are digital creators focused on helping musicians and other
+            artists with distribution and support.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {PILLARS.map((p) => (

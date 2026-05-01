@@ -18,7 +18,7 @@ const PROGRAM: Block[] = [
   { target: '12:15', type: 'MUSIC', label: 'Opening set', detail: 'First artist of the day, 25-30 minutes.' },
   { target: '~12:50', type: 'TALK', label: 'Welcome to ZAOstock', detail: '5-10 minutes. What this is and why we built it.' },
   { target: '~13:05', type: 'MUSIC', label: 'Artist 2', detail: '15-20 minute set.' },
-  { target: '~13:35', type: 'TALK', label: 'Web3 music 101', detail: '5-10 minutes. Why onchain music matters, pitched for IRL audience.' },
+  { target: '~13:35', type: 'TALK', label: 'Music distribution 101', detail: '5-10 minutes. Why digital distribution matters for independent artists, pitched for IRL audience.' },
   { target: '~13:50', type: 'MUSIC', label: 'Artist 3', detail: '15-20 minute set.' },
   { target: '~14:20', type: 'BREAK', label: 'Mid-day break', detail: '15 minutes. Food trucks, bathrooms, mingle.' },
   { target: '~14:35', type: 'MUSIC', label: 'Artist 4', detail: '20-30 minute set.' },

@@ -354,7 +354,7 @@ export default async function TestPage() {
           <SectionHeader eyebrow="Partner With Us" title="Three paths. No tiers." />
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-3xl mb-8">
             No Gold / Silver / Bronze. Partners get named credit for the role they play. Custom packages available for
-            local Ellsworth businesses, web3 brands, and ecosystem partners. Tax-deductible donations supporting
+            local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting
             ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">

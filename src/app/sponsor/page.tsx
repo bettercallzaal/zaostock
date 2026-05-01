@@ -39,7 +39,7 @@ const SPONSOR_TRACKS = [
   },
   {
     track: 'Virtual Partners',
-    subtitle: 'Web3 brands, DAOs, digital-native companies',
+    subtitle: 'Digital creator brands and digital-native companies',
     color: '#818cf8',
     benefits: [
       'Livestream overlay branding (YouTube, Twitch, ZAO OS)',
@@ -79,7 +79,7 @@ const ADVISORS = [
 const PAST_PROOF = [
   {
     name: 'ZAO-CHELLA',
-    detail: 'Art Basel Miami, Dec 2024 - 10 Web3 artists, AR art, trading cards, Wynwood',
+    detail: 'Art Basel Miami, Dec 2024 - 10 digital artists, AR art, trading cards, Wynwood',
   },
   {
     name: 'COC Concertz',
@@ -87,7 +87,7 @@ const PAST_PROOF = [
   },
   {
     name: 'WaveWarZ',
-    detail: '795 music battles, 435 SOL ($37K+) volume, artists paid instantly onchain',
+    detail: '795 music battles, 435 SOL ($37K+) volume, artists paid instantly via Solana',
   },
   {
     name: 'ZAO Fractals',
