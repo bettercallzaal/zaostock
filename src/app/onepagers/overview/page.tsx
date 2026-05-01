@@ -66,7 +66,7 @@ const PILLARS: Pillar[] = [
 const PARTNERS: Partner[] = [
   { name: 'Town of Ellsworth', role: 'Venue partner — Franklin St Parklet', confirmed: true },
   { name: 'Heart of Ellsworth', role: 'Local promotion + Maine cultural ties', confirmed: true },
-  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
+  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor (via ENTERACT)', confirmed: true },
   { name: 'ENTERACT', role: 'Technical build', confirmed: true },
 ].filter((p) => p.confirmed);
 
@@ -100,7 +100,7 @@ const SPONSOR_TIERS = [
       'Post-event thank-you feature + recap',
       'Advisory seat for Year 2 planning',
       'Priority placement in 2027',
-      'Tax-deductible via New Media Commons',
+      'Tax-deductible via Fractured Atlas',
     ],
   },
 ];
@@ -115,7 +115,7 @@ const HOW_TO = [
   {
     role: 'Sponsors',
     detail:
-      '$500+ across 3 tiers. Local + national both welcome. Tax-deductible donations via New Media Commons.',
+      '$500+ across 3 tiers. Local + national both welcome. Tax-deductible donations via Fractured Atlas (501(c)(3) fiscal sponsor through ENTERACT).',
     cta: { label: 'Partner deck', href: '/sponsor/deck' },
   },
   {
@@ -371,7 +371,7 @@ export default async function OverviewOnePager() {
             Sponsorship
           </h2>
           <p className="mt-2 text-sm text-slate-400 print:text-slate-600">
-            Tax-deductible via New Media Commons. Direct-deal with The ZAO.
+            Tax-deductible via Fractured Atlas. Direct-deal with The ZAO.
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
             {SPONSOR_TIERS.map((t) => (

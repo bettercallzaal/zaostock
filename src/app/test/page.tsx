@@ -69,7 +69,7 @@ const SPONSOR_OFFERINGS = [
       'Post-event thank-you feature and recap',
       'Advisory seat for Year 2 planning',
       'Priority placement in 2027',
-      'Tax-deductible via New Media Commons 501(c)(3)',
+      'Tax-deductible via Fractured Atlas 501(c)(3)',
     ],
   },
 ];
@@ -92,7 +92,7 @@ const PAST_EVENTS = [
 const PARTNERS = [
   { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
+  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor (via ENTERACT)', confirmed: true },
   { name: 'ENTERACT', role: 'Technical build', confirmed: true },
 ].filter((p) => p.confirmed);
 
@@ -436,7 +436,7 @@ export default async function TestPage() {
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-3xl mb-8">
             No Gold / Silver / Bronze. Partners get named credit for the role they play. Custom packages available for
             local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting
-            ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
+            ZAOstock route through ENTERACT's fiscal sponsorship with Fractured Atlas, a 501(c)(3) public charity.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
             {SPONSOR_OFFERINGS.map((g) => (

@@ -44,7 +44,7 @@ const SPONSOR_OFFERINGS = [
     'Post-event thank-you feature and recap',
     'Advisory seat for Year 2 planning',
     'Priority placement in 2027',
-    'Tax-deductible via New Media Commons 501(c)(3)',
+    'Tax-deductible via Fractured Atlas 501(c)(3)',
   ]},
 ];
 
@@ -74,7 +74,7 @@ const ZAO_FESTIVALS = [
 const PARTNERS = [
   { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true },
   { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'New Media Commons', role: '501(c)(3) fiscal sponsor', confirmed: true },
+  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor (via ENTERACT)', confirmed: true },
   { name: 'ENTERACT', role: 'Technical build', confirmed: true },
 ].filter((p) => p.confirmed);
 
@@ -342,7 +342,7 @@ export default async function StockPage() {
           <p className="text-xs text-gray-500 uppercase tracking-wider px-1">Partner With Us</p>
           <div className="bg-[#0d1b2a] rounded-xl p-5 border border-white/[0.08] space-y-2">
             <p className="text-sm text-gray-300 leading-relaxed">
-              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through New Media Commons, our 501(c)(3) fiscal sponsor.
+              No Gold / Silver / Bronze. Partners get named credit for the role they play: Main Stage Partner, Broadcast Partner, or Year-Round Partner. Three paths, plus flexible custom packages for Local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting ZAOstock route through ENTERACT's fiscal sponsorship with Fractured Atlas, a 501(c)(3) public charity.
             </p>
             <p className="text-xs text-gray-500">
               Full deck on request &middot; Reach out to start the conversation
