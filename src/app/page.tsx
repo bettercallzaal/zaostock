@@ -116,6 +116,12 @@ export default async function StockPage() {
               Volunteer
             </Link>
             <Link
+              href="/donate"
+              className="text-xs text-gray-400 hover:text-[#f5a623] transition-colors"
+            >
+              Donate
+            </Link>
+            <Link
               href="/sponsor/deck"
               className="text-xs text-gray-400 hover:text-[#f5a623] transition-colors"
             >
@@ -137,20 +143,46 @@ export default async function StockPage() {
         </div>
       </header>
 
-      <div className="max-w-2xl mx-auto px-4 py-6 space-y-8">
-        {/* Hero */}
-        <div className="text-center space-y-4">
-          <div className="inline-block rounded-full bg-[#f5a623]/10 px-4 py-1.5 text-sm text-[#f5a623] font-medium border border-[#f5a623]/30">
+      {/* Hero with background image */}
+      <section className="relative overflow-hidden border-b border-white/[0.06]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/zao/wavewarz-banner.jpg"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.18] scale-110"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/70 via-[#0a1628]/85 to-[#0a1628]" />
+        <div className="relative max-w-2xl mx-auto px-4 py-12 text-center space-y-4">
+          <div className="inline-block rounded-full bg-[#f5a623]/15 px-4 py-1.5 text-sm text-[#f5a623] font-medium border border-[#f5a623]/40 backdrop-blur-sm">
             October 3, 2026
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">ZAOstock</h2>
-          <p className="text-gray-400 text-lg max-w-md mx-auto">
+          <h2 className="text-5xl sm:text-7xl font-bold tracking-tight">ZAOstock</h2>
+          <p className="text-gray-300 text-base sm:text-lg max-w-md mx-auto">
             A community-built outdoor music festival in Ellsworth, Maine. Independent artists. One stage. All day.
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             Franklin Street Parklet &middot; 12pm&ndash;6pm &middot; Part of Art of Ellsworth
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
+            <Link
+              href="/donate"
+              className="bg-[#f5a623] hover:bg-[#ffd700] text-black font-bold rounded-lg px-5 py-2.5 text-sm transition-colors"
+            >
+              Donate
+            </Link>
+            <Link
+              href="/apply"
+              className="border border-white/30 hover:border-[#f5a623] hover:text-[#f5a623] text-white font-bold rounded-lg px-5 py-2.5 text-sm transition-colors"
+            >
+              Volunteer
+            </Link>
+          </div>
         </div>
+      </section>
+
+      <div className="max-w-2xl mx-auto px-4 py-6 space-y-8">
 
         {/* Countdown */}
         <div className="bg-[#0d1b2a] rounded-xl p-6 border border-white/[0.08]">
