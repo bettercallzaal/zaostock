@@ -59,7 +59,7 @@ const ZAO_FESTIVALS = [
   {
     name: 'ZAOville',
     when: 'DMV · Jul 2026',
-    description: 'DMV chapter co-hosted with DCoop (founder of The Village Entertainment Collective; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup: ELYVN, PROF!T, DCoop, Ash, John Clark.',
+    description: 'DMV chapter co-hosted with DCoop (founder of The Village Entertainment Collective; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup includes PROF!T, ELYVN, and more.',
   },
   {
     name: 'ZAOstock',
