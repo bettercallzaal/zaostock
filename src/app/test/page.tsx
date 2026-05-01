@@ -401,7 +401,7 @@ export default async function TestPage() {
             <PastEventCard
               year="Oct 2026"
               name="ZAOstock"
-              description="First standalone ZAO Festivals weekend. Independent artists, one stage, all day in Ellsworth Maine."
+              description="First standalone ZAO Festivals event. Independent artists, one stage, all day in Ellsworth Maine."
               hue="amber"
               status="upcoming"
             />
