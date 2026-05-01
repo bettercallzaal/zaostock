@@ -10,6 +10,25 @@ const config: NextConfig = {
       { protocol: 'https', hostname: 'postimg.cc' },
     ],
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // donate.zaostock.com -> /donate
+        {
+          source: '/',
+          destination: '/donate',
+          has: [{ type: 'host', value: 'donate.zaostock.com' }],
+        },
+        {
+          source: '/:path*',
+          destination: '/donate/:path*',
+          has: [{ type: 'host', value: 'donate.zaostock.com' }],
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
 };
 
 export default config;
