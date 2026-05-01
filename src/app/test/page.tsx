@@ -394,7 +394,7 @@ export default async function TestPage() {
             <PastEventCard
               year="July 2026"
               name="ZAOville"
-              description="DMV chapter co-hosted with DCoop (artist, founder of The VEC). Confirmed lineup: ELYVN, PROF!T, DCoop, Ash, John Clark. Runway into ZAOstock."
+              description="DMV chapter co-hosted with DCoop (founder of The VEC; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup: ELYVN, PROF!T, DCoop, Ash, John Clark."
               hue="emerald"
               status="upcoming"
             />

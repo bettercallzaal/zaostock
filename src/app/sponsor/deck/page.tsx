@@ -63,7 +63,7 @@ const FAQ = [
   },
   {
     q: 'Who is The ZAO?',
-    a: 'A decentralized music community on Farcaster, Base, and Solana, active since 2023. Two community events ran so far: ZAO-PALOOZA in NYC during NFT NYC, April 2024; ZAO-CHELLA in Miami during Art Basel, December 2024. ZAOville in the DMV is co-hosted with DCoop (artist, founder of The Village Entertainment Collective) in July 2026; confirmed lineup: ELYVN, PROF!T, DCoop, Ash, John Clark. ZAOstock 2026 is the next event - a one-day festival in Ellsworth Maine, part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Co-presented with Heart of Ellsworth and the Town of Ellsworth.',
+    a: 'A decentralized music community on Farcaster, Base, and Solana, active since 2023. Two community events ran so far: ZAO-PALOOZA in NYC during NFT NYC, April 2024; ZAO-CHELLA in Miami during Art Basel, December 2024. ZAOville in the DMV is co-hosted with DCoop (founder of The Village Entertainment Collective) in July 2026 - cross-promotion across the series since DCoop performed at ZAO-CHELLA Miami 2024 and returns for ZAOstock. Confirmed lineup: ELYVN, PROF!T, DCoop, Ash, John Clark. ZAOstock 2026 is the next event - a one-day festival in Ellsworth Maine, part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Co-presented with Heart of Ellsworth and the Town of Ellsworth.',
   },
   {
     q: 'How many people show up?',
