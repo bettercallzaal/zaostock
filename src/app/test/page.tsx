@@ -12,6 +12,10 @@ import { PastEventCard } from '@/components/festival/PastEventCard';
 import { StickyActionBar } from '@/components/festival/StickyActionBar';
 import { TeamMosaic } from '@/components/festival/TeamMosaic';
 import { NoiseOverlay } from '@/components/festival/NoiseOverlay';
+import { ScrollEyebrow } from '@/components/festival/ScrollEyebrow';
+import { AnimatedGradient } from '@/components/festival/AnimatedGradient';
+import { TagMarquee } from '@/components/festival/TagMarquee';
+import { TiltCard } from '@/components/festival/TiltCard';
 
 export const dynamic = 'force-dynamic';
 
@@ -105,6 +109,7 @@ export default async function TestPage() {
   return (
     <div className="min-h-[100dvh] bg-[#0a1628] text-white pb-24 sm:pb-12 font-[family-name:var(--font-display)]">
       <NoiseOverlay />
+      <AnimatedGradient />
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#0a1628]/95 backdrop-blur-md border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
@@ -180,8 +185,26 @@ export default async function TestPage() {
               Tickets required for parklet entry / Free to listen from outside
             </span>
           </div>
+          <ScrollEyebrow />
         </div>
       </section>
+
+      {/* Tag marquee — what ZAOstock is in 1 line */}
+      <TagMarquee
+        tags={[
+          'Independent artists',
+          'Year 1 in Maine',
+          'Oct 3 2026',
+          'Franklin St Parklet',
+          'Maine Craft Weekend',
+          'Art of Ellsworth · 9th annual',
+          'Free to listen',
+          'Community-built',
+          'Break-even',
+          'Run by The ZAO',
+          'Music first',
+        ]}
+      />
 
       {/* Countdown bar */}
       <section className="border-y border-white/[0.12] bg-[#0d1b2a]/40">
@@ -428,29 +451,34 @@ export default async function TestPage() {
           <SectionHeader eyebrow="Lineage" title="What came before. What's next." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {PAST_EVENTS.map((e) => (
-              <PastEventCard
-                key={e.name}
-                year={e.year}
-                name={e.name}
-                description={e.description}
-                hue={e.hue}
-                status="past"
-              />
+              <TiltCard key={e.name}>
+                <PastEventCard
+                  year={e.year}
+                  name={e.name}
+                  description={e.description}
+                  hue={e.hue}
+                  status="past"
+                />
+              </TiltCard>
             ))}
-            <PastEventCard
-              year="July 2026"
-              name="ZAOville"
-              description="DMV chapter co-hosted with DCoop (founder of The VEC; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup includes PROF!T, ELYVN, and more."
-              hue="emerald"
-              status="upcoming"
-            />
-            <PastEventCard
-              year="Oct 2026"
-              name="ZAOstock"
-              description="Community-built one-day festival in Ellsworth Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Independent artists, one stage, all day."
-              hue="amber"
-              status="upcoming"
-            />
+            <TiltCard>
+              <PastEventCard
+                year="July 2026"
+                name="ZAOville"
+                description="DMV chapter co-hosted with DCoop (founder of The VEC; performed at ZAO-CHELLA Miami 2024, returning for ZAOstock). Cross-promotion across the ZAO Festivals series. Lineup includes PROF!T, ELYVN, and more."
+                hue="emerald"
+                status="upcoming"
+              />
+            </TiltCard>
+            <TiltCard>
+              <PastEventCard
+                year="Oct 2026"
+                name="ZAOstock"
+                description="Community-built one-day festival in Ellsworth Maine. Part of the 9th Annual Art of Ellsworth during Maine Craft Weekend. Independent artists, one stage, all day."
+                hue="amber"
+                status="upcoming"
+              />
+            </TiltCard>
           </div>
         </div>
       </section>
