@@ -59,7 +59,7 @@ const ZAO_FESTIVALS = [
   {
     name: 'ZAOville',
     when: 'DMV · Jul 2026',
-    description: 'ZAO Festivals helps host with DCoop in the DMV — the runway leading into ZAOstock.',
+    description: 'DMV chapter co-hosted with DCoop (artist, founder of The Village Entertainment Collective). Confirmed lineup: ELYVN, PROF!T, DCoop, Ash, John Clark. Runway into ZAOstock.',
   },
   {
     name: 'ZAOstock',
