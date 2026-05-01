@@ -107,7 +107,7 @@ export default async function OnePagerPage() {
           <p className="text-xs uppercase tracking-wider font-bold mb-2">Keep These In Mind</p>
           <ul className="text-sm space-y-1">
             <li>- ZAOstock operates at <strong>break-even</strong>. Every dollar goes to artists + production.</li>
-            <li>- Community-built. Fair artist pay. No margin, no extraction.</li>
+            <li>- Community-built. Fair artist pay. Break-even.</li>
             <li>- Independent artists, 1 stage, all day, Franklin Street Parklet.</li>
             <li>- Part of the 9th Annual Art of Ellsworth.</li>
           </ul>

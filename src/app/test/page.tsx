@@ -251,10 +251,9 @@ export default async function TestPage() {
       {/* Manifesto */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="How We Run It" title="No margin. No extraction. Built by the community." />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
-            <StatTile value="100%" label="Goes to artists + production" accent />
-            <StatTile value="0%" label="Operator margin" />
+          <SectionHeader eyebrow="How We Run It" title="Built by the community, for the community." />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.12] border border-white/[0.12]">
+            <StatTile value="100%" label="Goes to artists, organizers, travel, materials" accent />
             <StatTile value="501(c)(3)" label="Tax-deductible via New Media Commons" />
           </div>
         </div>

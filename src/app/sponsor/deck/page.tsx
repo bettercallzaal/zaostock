@@ -59,7 +59,7 @@ const FAQ = [
   },
   {
     q: 'What do you do with the funds?',
-    a: 'Every dollar goes to artist pay, production, and keeping the festival accessible. ZAOstock operates at break-even. No margin, no extraction.',
+    a: 'Funds pay artists and organizers, cover travel, and buy what we need on the day. ZAOstock operates at break-even.',
   },
   {
     q: 'Who is The ZAO?',
