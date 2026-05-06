@@ -59,13 +59,6 @@ function normalizePhotoUrl(input: string): string {
   return url;
 }
 
-const SCOPE_OPTIONS: Array<{ value: string; label: string; hint: string }> = [
-  { value: '', label: 'Not picked yet', hint: 'decide later' },
-  { value: 'ops', label: 'Operations', hint: 'logistics, partnerships, run-of-show' },
-  { value: 'music', label: 'Music', hint: 'artist outreach, lineup, sound' },
-  { value: 'design', label: 'Design', hint: 'shirts, signage, brand' },
-];
-
 interface Props {
   memberName: string;
   initialBio: string;
@@ -87,7 +80,7 @@ export function BioEditor({ memberName, initialBio, initialLinks, initialPhotoUr
   const [statusText, setStatusText] = useState(initialStatusText ?? '');
   const [skills] = useState(initialSkills ?? '');
   const [photoUrl, setPhotoUrl] = useState(initialPhotoUrl);
-  const [scope, setScope] = useState(initialScope);
+  const [scope] = useState(initialScope);
   const [editing, setEditing] = useState(initialBio.trim().length === 0);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
@@ -292,47 +285,36 @@ export function BioEditor({ memberName, initialBio, initialLinks, initialPhotoUr
               Links <span className="text-gray-700 font-normal normal-case">(optional)</span>
             </p>
             <div className="space-y-1.5">
-              {linkRows.map((row, i) => {
-                const tag = describeLink(row);
-                return (
-                  <div key={i} className="flex items-center gap-1.5">
-                    <input
-                      value={row}
-                      onChange={(e) => {
-                        const next = [...linkRows];
-                        next[i] = e.target.value;
-                        setLinkRows(next);
-                      }}
-                      placeholder={i === 0 ? 'x.com/zaal · farcaster.xyz/zaal · @handle · email · any URL' : 'Another link'}
-                      maxLength={500}
-                      className="flex-1 bg-[#0a1628] border border-white/[0.08] rounded px-3 py-2 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-[#f5a623]/30"
-                    />
-                    {row.trim() && (
-                      <span
-                        className="text-[10px] uppercase tracking-wider bg-[#f5a623]/10 border border-[#f5a623]/20 text-[#fbbf24] rounded px-1.5 py-0.5 hidden sm:inline flex-shrink-0"
-                        title={`Detected: ${tag}`}
-                      >
-                        {tag}
-                      </span>
-                    )}
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (linkRows.length === 1) {
-                          setLinkRows(['']);
-                        } else {
-                          setLinkRows(linkRows.filter((_, idx) => idx !== i));
-                        }
-                      }}
-                      title="Remove this link"
-                      aria-label="Remove this link"
-                      className="text-gray-600 hover:text-red-400 px-2 py-1 text-base transition-colors flex-shrink-0"
-                    >
-                      &times;
-                    </button>
-                  </div>
-                );
-              })}
+              {linkRows.map((row, i) => (
+                <div key={i} className="flex items-center gap-1.5">
+                  <input
+                    value={row}
+                    onChange={(e) => {
+                      const next = [...linkRows];
+                      next[i] = e.target.value;
+                      setLinkRows(next);
+                    }}
+                    placeholder={i === 0 ? 'x.com/zaal · farcaster.xyz/zaal · @handle · email · any URL' : 'Another link'}
+                    maxLength={500}
+                    className="flex-1 bg-[#0a1628] border border-white/[0.08] rounded px-3 py-2 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-[#f5a623]/30"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (linkRows.length === 1) {
+                        setLinkRows(['']);
+                      } else {
+                        setLinkRows(linkRows.filter((_, idx) => idx !== i));
+                      }
+                    }}
+                    title="Remove this link"
+                    aria-label="Remove this link"
+                    className="text-gray-500 hover:text-red-400 hover:bg-red-500/10 rounded px-2 py-1.5 text-xs uppercase tracking-wider transition-colors flex-shrink-0"
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
             </div>
             <button
               type="button"
@@ -349,34 +331,6 @@ export function BioEditor({ memberName, initialBio, initialLinks, initialPhotoUr
           <p className="text-[10px] text-gray-500 italic border-l-2 border-[#f5a623]/30 pl-2">
             Skills and circles are managed in the Telegram bot. DM <span className="text-[#fbbf24]">@ZAOstockTeamBot</span> and send <span className="text-[#fbbf24]">/skills</span> or <span className="text-[#fbbf24]">/circles</span>.
           </p>
-
-          {!isAdvisor && (
-            <div className="space-y-1.5">
-              <p className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">
-                Your team (internal - controls which todos you see)
-              </p>
-              <div className="grid grid-cols-2 gap-1.5">
-                {SCOPE_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    type="button"
-                    onClick={() => setScope(opt.value)}
-                    className={`text-left px-3 py-2 rounded border text-xs transition-colors ${
-                      scope === opt.value
-                        ? 'border-[#f5a623] bg-[#f5a623]/10 text-[#f5a623]'
-                        : 'border-white/[0.08] bg-[#0a1628] text-gray-300 hover:border-white/20'
-                    }`}
-                  >
-                    <div className="font-medium">{opt.label}</div>
-                    <div className="text-[10px] text-gray-500 mt-0.5">{opt.hint}</div>
-                  </button>
-                ))}
-              </div>
-              <p className="text-[10px] text-gray-600 italic">
-                You can switch any time. Publicly you just show as &ldquo;Team member&rdquo;.
-              </p>
-            </div>
-          )}
 
           {saveError && (
             <div className="bg-red-500/10 border border-red-500/40 rounded-lg px-3 py-2.5 text-[12px] text-red-300 leading-relaxed">
