@@ -13,9 +13,8 @@ export async function getStockCounts(): Promise<StockCounts> {
   const [vRes, rRes, sRes] = await Promise.allSettled([
     supabase.from('volunteers').select('id', { count: 'exact', head: true }),
     supabase
-      .from('event_rsvps')
-      .select('id', { count: 'exact', head: true })
-      .eq('event_slug', 'zao-stock-2026'),
+      .from('rsvps')
+      .select('id', { count: 'exact', head: true }),
     supabase
       .from('sponsors')
       .select('amount_committed, status')
