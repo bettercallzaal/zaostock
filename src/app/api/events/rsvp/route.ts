@@ -5,7 +5,9 @@ import { getSupabaseAdmin } from '@/lib/db/supabase';
 const rsvpSchema = z.object({
   name: z.string().trim().min(1, 'Name required').max(200),
   email: z.string().trim().email('Valid email required').max(200),
-  eventSlug: z.string().trim().min(1).max(100),
+  eventSlug: z.string().trim().max(100).optional(),
+  source: z.string().trim().max(100).optional(),
+  notes: z.string().trim().max(1000).optional(),
   hp: z.string().optional(),
 });
 
@@ -26,21 +28,27 @@ export async function POST(request: NextRequest) {
 
     const supabase = getSupabaseAdmin();
 
+    const emailLower = parsed.data.email.toLowerCase();
     const { data: existing } = await supabase
-      .from('event_rsvps')
+      .from('rsvps')
       .select('id')
-      .eq('email', parsed.data.email)
-      .eq('event_slug', parsed.data.eventSlug)
+      .eq('email', emailLower)
       .maybeSingle();
 
     if (existing) {
-      return NextResponse.json({ error: 'Already on the list' }, { status: 409 });
+      return NextResponse.json({ error: 'Already RSVPed' }, { status: 409 });
     }
 
-    const { error } = await supabase.from('event_rsvps').insert({
+    const sourceParts = [
+      parsed.data.source || 'homepage',
+      parsed.data.eventSlug ? `event:${parsed.data.eventSlug}` : null,
+    ].filter(Boolean) as string[];
+
+    const { error } = await supabase.from('rsvps').insert({
       name: parsed.data.name,
-      email: parsed.data.email,
-      event_slug: parsed.data.eventSlug,
+      email: emailLower,
+      source: sourceParts.join(' | '),
+      notes: parsed.data.notes || null,
     });
 
     if (error) {
@@ -49,6 +57,6 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true }, { status: 201 });
   } catch {
-    return NextResponse.json({ error: 'Bad request' }, { status: 400 });
+    return NextResponse.json({ error: 'Could not submit right now' }, { status: 500 });
   }
 }

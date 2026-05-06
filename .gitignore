@@ -9,3 +9,4 @@ out/
 next-env.d.ts
 .serena/
 scripts/team-codes.local.json
+.vercel

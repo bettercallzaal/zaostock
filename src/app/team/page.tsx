@@ -74,9 +74,8 @@ export default async function StockTeamPage() {
       .select('*, creator:team_members!created_by(id, name)')
       .order('meeting_date', { ascending: false }),
     supabase
-      .from('event_rsvps')
+      .from('rsvps')
       .select('id, name, email, created_at')
-      .eq('event_slug', 'zao-stock-2026')
       .order('created_at', { ascending: false }),
     supabase
       .from('circle_members')

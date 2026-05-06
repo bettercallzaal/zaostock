@@ -23,26 +23,55 @@ import { scryptSync, randomBytes } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
+// Source of truth: ZAO STOCK Supabase team_members table (27 rows incl. ZAOstock Bot).
+// Last synced 2026-05-05. Roster rebuilt around the 6-circle structure
+// (finance, host, livestream, marketing, music, ops). Active flag is the
+// dashboard gate; this list is who the static codes script can mint for.
 const TEAM = [
+  // ops (9 members + Zaal)
   { name: 'Zaal',           role: 'lead',   scope: 'ops' },
   { name: 'Candy',          role: '2nd',    scope: 'ops' },
   { name: 'FailOften',      role: 'member', scope: 'ops' },
   { name: 'Hurric4n3Ike',   role: 'member', scope: 'ops' },
   { name: 'Swarthy Hatter', role: 'member', scope: 'ops' },
   { name: 'Jango',          role: 'member', scope: 'ops' },
-  { name: 'DaNici',         role: 'lead',   scope: 'design' },
-  { name: 'Shawn',          role: 'member', scope: 'design' },
+  { name: 'Adam',           role: 'member', scope: 'ops' },
+  { name: 'Bacon',          role: 'member', scope: 'ops' },
+  { name: 'Cheeka',         role: 'member', scope: 'ops' },
+  { name: 'Eduard',         role: 'member', scope: 'ops' },
+  { name: 'Eve',            role: 'member', scope: 'ops' },
+  { name: 'GeekMyth',       role: 'member', scope: 'ops' },
+  { name: 'Jake',           role: 'member', scope: 'ops' },
+  // music (6)
   { name: 'DCoop',          role: '2nd',    scope: 'music' },
   { name: 'AttaBotty',      role: 'member', scope: 'music' },
-  { name: 'Tyler Stambaugh',role: 'member', scope: 'finance' },
+  { name: 'Shawn',          role: 'member', scope: 'music' },
+  // livestream (Thy Revolution leads after May 4 cobuild)
+  { name: 'Thy Revolution', role: 'lead',   scope: 'livestream' },
+  // finance team (sponsor + budget side)
+  { name: 'Tyler Stambaugh',role: 'advisory', scope: 'finance' },
   { name: 'Ohnahji B',      role: 'member', scope: 'finance' },
   { name: 'DFresh',         role: 'member', scope: 'finance' },
-  { name: 'Craig G',        role: 'member', scope: 'finance' },
+  { name: 'Craig G',        role: 'advisory', scope: 'finance' },
   { name: 'Maceo',          role: 'member', scope: 'finance' },
+  // design lead (DaNici inactive in DB, kept for code generation)
+  { name: 'DaNici',         role: 'lead',   scope: 'design' },
+  // unaffiliated (no scope yet, advisory + community)
+  { name: 'Iman Afrikah',   role: 'member', scope: '' },
+  { name: 'Stilo World',    role: 'member', scope: '' },
+  { name: 'Tom Fellenz',    role: 'advisory', scope: '' },
 ];
 
 function deterministicCode(name) {
   return name.replace(/\s+/g, '').slice(0, 4).toUpperCase();
+}
+
+// unambiguous alphabet - no 0/O/1/I/L
+const RANDOM_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+function randomCode() {
+  let c = '';
+  for (let i = 0; i < 4; i++) c += RANDOM_ALPHABET[randomBytes(1)[0] % RANDOM_ALPHABET.length];
+  return c;
 }
 
 function hashPassword(password) {
@@ -112,9 +141,9 @@ async function testCmd() {
   console.log('');
 }
 
-function resetCmd(rawName) {
+function resetCmd(rawName, { mode = 'random' } = {}) {
   if (!rawName) {
-    console.error('Usage: npm run codes reset <Name>');
+    console.error('Usage: npm run codes reset <Name> [--deterministic]');
     process.exit(1);
   }
   const member = TEAM.find(
@@ -126,12 +155,12 @@ function resetCmd(rawName) {
     process.exit(1);
   }
 
-  const code = deterministicCode(member.name);
+  const code = mode === 'deterministic' ? deterministicCode(member.name) : randomCode();
   const passwordHash = hashPassword(code);
 
   console.log(`\nReset SQL for ${member.name} (paste into Supabase SQL Editor)`);
   console.log('================================================================');
-  console.log(`-- Sets ${member.name}'s 4-letter login code back to "${code}"`);
+  console.log(`-- Sets ${member.name}'s 4-letter login code to "${code}" (${mode})`);
   console.log(`-- Generated ${new Date().toISOString()}`);
   console.log(`-- Codes are case-insensitive at login (always uppercased before hash check).\n`);
   console.log(`UPDATE team_members`);
@@ -141,7 +170,7 @@ function resetCmd(rawName) {
   console.log(`-- After running:`);
   console.log(`--   1) Confirm 1 row updated.`);
   console.log(`--   2) DM ${member.name} the code: ${code}`);
-  console.log(`--   3) Verify: npm run codes test\n`);
+  console.log(`--   3) Update scripts/team-codes.local.json so verify keeps passing.\n`);
 }
 
 async function verifyCmd(filePath) {
@@ -210,9 +239,13 @@ switch (cmd) {
   case 'verify':
     await verifyCmd(rest[0]);
     break;
-  case 'reset':
-    resetCmd(rest.join(' ').trim());
+  case 'reset': {
+    const args = rest.filter((a) => !a.startsWith('--'));
+    const flags = rest.filter((a) => a.startsWith('--'));
+    const mode = flags.includes('--deterministic') ? 'deterministic' : 'random';
+    resetCmd(args.join(' ').trim(), { mode });
     break;
+  }
   default:
     console.error(`Unknown command: ${cmd}`);
     console.error('Usage: npm run codes [list|test|verify <file>|reset <Name>]');
