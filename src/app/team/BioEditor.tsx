@@ -85,7 +85,7 @@ export function BioEditor({ memberName, initialBio, initialLinks, initialPhotoUr
   });
   const links = useMemo(() => joinLinks(linkRows), [linkRows]);
   const [statusText, setStatusText] = useState(initialStatusText ?? '');
-  const [skills, setSkills] = useState(initialSkills ?? '');
+  const [skills] = useState(initialSkills ?? '');
   const [photoUrl, setPhotoUrl] = useState(initialPhotoUrl);
   const [scope, setScope] = useState(initialScope);
   const [editing, setEditing] = useState(initialBio.trim().length === 0);
@@ -308,7 +308,10 @@ export function BioEditor({ memberName, initialBio, initialLinks, initialPhotoUr
                       className="flex-1 bg-[#0a1628] border border-white/[0.08] rounded px-3 py-2 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-[#f5a623]/30"
                     />
                     {row.trim() && (
-                      <span className="text-[10px] text-gray-500 px-1 hidden sm:inline w-16 text-right truncate" title={tag}>
+                      <span
+                        className="text-[10px] uppercase tracking-wider bg-[#f5a623]/10 border border-[#f5a623]/20 text-[#fbbf24] rounded px-1.5 py-0.5 hidden sm:inline flex-shrink-0"
+                        title={`Detected: ${tag}`}
+                      >
                         {tag}
                       </span>
                     )}
@@ -343,22 +346,9 @@ export function BioEditor({ memberName, initialBio, initialLinks, initialPhotoUr
             </p>
           </div>
 
-          <div className="space-y-1.5">
-            <label className="text-[10px] uppercase tracking-wider text-gray-500 font-bold flex items-center gap-1">
-              Skills <HelpIcon section="skills" />
-              <span className="text-gray-700 font-normal normal-case">(comma-separated)</span>
-            </label>
-            <input
-              value={skills}
-              onChange={(e) => setSkills(e.target.value)}
-              placeholder="video, sound, sponsorship outreach, photography, music production..."
-              maxLength={500}
-              className="w-full bg-[#0a1628] border border-white/[0.08] rounded px-3 py-2 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-[#f5a623]/30"
-            />
-            <p className="text-[10px] text-gray-600 italic">
-              What you can offer the team. Up to 500 chars. Used to match you to work that needs done.
-            </p>
-          </div>
+          <p className="text-[10px] text-gray-500 italic border-l-2 border-[#f5a623]/30 pl-2">
+            Skills and circles are managed in the Telegram bot. DM <span className="text-[#fbbf24]">@ZAOstockTeamBot</span> and send <span className="text-[#fbbf24]">/skills</span> or <span className="text-[#fbbf24]">/circles</span>.
+          </p>
 
           {!isAdvisor && (
             <div className="space-y-1.5">
