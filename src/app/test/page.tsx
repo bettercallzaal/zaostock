@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { RSVPForm } from '../RSVPForm';
 import { getPublicMembers, getStockCounts, type PublicMember } from '@/lib/members';
-import { LineupMarquee } from '@/components/festival/LineupMarquee';
 import { FactStrip } from '@/components/festival/FactStrip';
 import { SectionHeader } from '@/components/festival/SectionHeader';
 import { StatTile } from '@/components/festival/StatTile';
@@ -14,9 +13,7 @@ import { TeamMosaic } from '@/components/festival/TeamMosaic';
 import { NoiseOverlay } from '@/components/festival/NoiseOverlay';
 import { ScrollEyebrow } from '@/components/festival/ScrollEyebrow';
 import { AnimatedGradient } from '@/components/festival/AnimatedGradient';
-import { TagMarquee } from '@/components/festival/TagMarquee';
 import { TiltCard } from '@/components/festival/TiltCard';
-import { VibesGrid } from '@/components/festival/VibesGrid';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,13 +32,9 @@ const FACTS = [
   { label: 'Lineup', value: 'Independent Artists' },
 ];
 
-const LINEUP_SLOTS = [
-  'TBA', 'TBA', 'DJ', 'TBA', 'TBA', 'TBA', 'DJ', 'TBA',
-];
-
 const SPONSOR_OFFERINGS = [
   {
-    category: 'Main Stage Partner',
+    category: 'Main Stage Sponsor',
     number: '01',
     items: [
       'Named credit on stage banner and signage',
@@ -52,7 +45,7 @@ const SPONSOR_OFFERINGS = [
     ],
   },
   {
-    category: 'Broadcast Partner',
+    category: 'Broadcast Sponsor',
     number: '02',
     items: [
       'Named credit on festival website with backlink',
@@ -63,7 +56,7 @@ const SPONSOR_OFFERINGS = [
     ],
   },
   {
-    category: 'Year-Round Partner',
+    category: 'Year-Round Sponsor',
     number: '03',
     items: [
       'Post-event thank-you feature and recap',
@@ -89,11 +82,15 @@ const PAST_EVENTS = [
   },
 ];
 
+// PARTNER GATING RULES (strict): a partner may appear here only if
+//   1. confirmed === true (locked agreement, not "in conversation")
+//   2. poc is a real ZAO team member who owns the relationship
+// Sponsors (paid placements) live in SPONSOR_OFFERINGS, not here.
 const PARTNERS = [
-  { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true },
-  { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true },
-  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor (via ENTERACT)', confirmed: true },
-  { name: 'ENTERACT', role: 'Technical build', confirmed: true },
+  { name: 'Heart of Ellsworth', role: 'Local promotion + Maine Craft Weekend coordination', confirmed: true, poc: 'Zaal' },
+  { name: 'Town of Ellsworth', role: 'Parklet venue', confirmed: true, poc: 'Zaal' },
+  { name: 'Fractured Atlas', role: '501(c)(3) fiscal sponsor (via ENTERACT)', confirmed: true, poc: 'FailOften' },
+  { name: 'ENTERACT', role: 'Technical build', confirmed: true, poc: 'FailOften' },
 ].filter((p) => p.confirmed);
 
 const NAV = [
@@ -190,22 +187,13 @@ export default async function TestPage() {
         </div>
       </section>
 
-      {/* Tag marquee — what ZAOstock is in 1 line */}
-      <TagMarquee
-        tags={[
-          'Independent artists',
-          'Year 1 in Maine',
-          'Oct 3 2026',
-          'Franklin St Parklet',
-          'Maine Craft Weekend',
-          'Art of Ellsworth · 9th annual',
-          'Free to listen',
-          'Community-built',
-          'Break-even',
-          'Run by The ZAO',
-          'Music first',
-        ]}
-      />
+      {/* TODO[photos]: Source 6-12 high-res shots from past events
+          - ZAO-PALOOZA NYC (Apr 2024) - stage + crowd + cipher
+          - ZAO-CHELLA Miami (Dec 2024) - WaveWarZ battle + ZAO HOUSE residency + visual artists
+          - ZAOville DMV prep (Jul 2026)
+          When curated: reinstate VibesGrid section between "About" and "How We Run It".
+          Also: replace TagMarquee here once lineup confirms (Aug 2026) with actual artist names.
+      */}
 
       {/* Countdown bar */}
       <section className="border-y border-white/[0.12] bg-[#0d1b2a]/40">
@@ -221,19 +209,33 @@ export default async function TestPage() {
         </div>
       </section>
 
-      {/* Lineup marquee */}
+      {/* Lineup teaser */}
       <section className="my-12 sm:my-16">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 mb-6 flex items-baseline justify-between gap-4 flex-wrap">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <SectionHeader eyebrow="The Lineup" title="Independent artists. One stage." />
-          <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.2em]">
-            Announced August 2026
-          </span>
-        </div>
-        <LineupMarquee slots={LINEUP_SLOTS} speedSeconds={45} />
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 mt-6">
-          <p className="text-sm text-gray-400 max-w-2xl">
-            Independent artists with DJs between every act. Lineup announced August 2026.
-          </p>
+          <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="lg:col-span-7">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                A full day of independent artists with DJs between every act. The full lineup drops August 2026 once final commitments are locked.
+              </p>
+            </div>
+            <div className="lg:col-span-5 lg:pl-8 lg:border-l border-white/[0.12]">
+              <dl className="space-y-4">
+                <div className="flex flex-col gap-1">
+                  <dt className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">Lineup drops</dt>
+                  <dd className="text-base text-white">August 2026</dd>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <dt className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">Stage</dt>
+                  <dd className="text-base text-white">One stage, all day</dd>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <dt className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">Format</dt>
+                  <dd className="text-base text-white">Live sets with DJs between</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -274,17 +276,6 @@ export default async function TestPage() {
         </div>
       </section>
 
-      {/* Vibes grid - photos from past ZAO events */}
-      <section className="my-16 sm:my-24">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="The vibe" title="Live from the last two years." />
-          <VibesGrid />
-          <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.2em] mt-5">
-            ZAO-PALOOZA NYC 2024 / ZAO-CHELLA Miami 2024 / WaveWarZ live battles
-          </p>
-        </div>
-      </section>
-
       {/* Manifesto + stats bento */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
@@ -318,7 +309,7 @@ export default async function TestPage() {
               </dl>
             </div>
             <div className="lg:col-span-7 relative overflow-hidden border border-white/[0.12] bg-[#0d1b2a] aspect-[4/3] lg:aspect-auto group">
-              {/* Stylized map placeholder gradient — drop in actual map image when available */}
+              {/* Stylized location panel - gradient backdrop */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a4d3a]/60 via-[#0d1b2a] to-[#0a1628] transition-transform duration-700 group-hover:scale-105">
                 <div className="absolute inset-0 opacity-[0.08]" style={{
                   backgroundImage: 'radial-gradient(circle at 30% 40%, rgba(245,166,35,0.4) 0, transparent 50%), radial-gradient(circle at 70% 70%, rgba(244,63,94,0.3) 0, transparent 50%)',
@@ -356,7 +347,10 @@ export default async function TestPage() {
       {/* Partners */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="Partners" title="Building this together." />
+          <SectionHeader eyebrow="Partners" title="Time + service. No checks written." />
+          <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-3xl mb-8">
+            Partners give time, venue, and infrastructure - not money. Each one has a confirmed agreement and a dedicated point of contact on the ZAO team. Sponsorship tracks below.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
             {PARTNERS.map((p) => (
               <div key={p.name} className="bg-[#0d1b2a] p-6">
@@ -370,6 +364,12 @@ export default async function TestPage() {
                 </div>
                 <p className="font-bold text-white text-lg tracking-tight">{p.name}</p>
                 <p className="text-xs sm:text-sm text-gray-400 mt-1">{p.role}</p>
+                <div className="mt-4 pt-3 border-t border-white/[0.08] flex items-baseline justify-between gap-2">
+                  <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase text-gray-500 tracking-[0.18em]">
+                    POC
+                  </span>
+                  <span className="text-sm text-white font-medium">{p.poc}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -432,10 +432,9 @@ export default async function TestPage() {
       {/* Sponsorship */}
       <section className="my-16 sm:my-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <SectionHeader eyebrow="Partner With Us" title="Three paths. No tiers." />
+          <SectionHeader eyebrow="Sponsors" title="Three paths. No tiers." />
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-3xl mb-8">
-            No Gold / Silver / Bronze. Partners get named credit for the role they play. Custom packages available for
-            local Ellsworth businesses, digital creator brands, and ecosystem partners. Tax-deductible donations supporting
+            No Gold / Silver / Bronze. Sponsors fund the festival in exchange for named credit and on-site presence. Custom packages available for local Ellsworth businesses, digital creator brands, and ecosystem brands. Tax-deductible donations supporting
             ZAOstock route through ENTERACT's fiscal sponsorship with Fractured Atlas, a 501(c)(3) public charity.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.12] border border-white/[0.12]">
@@ -451,7 +450,7 @@ export default async function TestPage() {
               href="/sponsor"
               className="bg-[#f5a623] hover:bg-[#ffd700] text-black font-bold font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.18em] px-6 py-3 transition-colors"
             >
-              Become a partner
+              Become a sponsor
             </Link>
           </div>
         </div>
