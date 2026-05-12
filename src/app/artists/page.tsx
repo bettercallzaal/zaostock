@@ -29,7 +29,7 @@ export default function ArtistsPage() {
         'Help share when we feature your work.',
       ]}
       ctas={[
-        { label: 'Pitch a piece', href: 'mailto:zaalp99@gmail.com?subject=ZAOstock%20Artist%20Pitch', primary: true },
+        { label: 'Suggest your work', href: '/suggest', primary: true },
         { label: 'Volunteer slot', href: '/apply' },
       ]}
       footnote="Bring an idea, not a pitch deck. The team that ships the visual identity for ZAOstock 2026 carries that work forward into ZAOville, future festivals, and the broader ZAO Festivals brand kit."
