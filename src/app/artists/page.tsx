@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: 'For Artists · ZAOstock',
   description:
     'Build the visual identity of a festival people remember. ZAOstock needs visual artists across the build - posters, signage, on-site installations, photography, motion. Your work becomes part of the ZAO Festivals lineage.',
+  openGraph: {
+    title: 'For Artists · ZAOstock 2026',
+    description: 'Build the visual identity of a festival people remember. Posters, signage, installations, motion. October 3, 2026.',
+    url: 'https://zaostock.com/artists',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'For Artists · ZAOstock 2026',
+    description: 'Build the visual identity. Posters, signage, installations, motion.',
+  },
 };
 
 export default function ArtistsPage() {

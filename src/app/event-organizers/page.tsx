@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: 'For Event Organizers · ZAOstock',
   description:
     'Built a community? Run your own ZAO. ZAOstock is the third event in the ZAO Festivals series after PALOOZA NYC and CHELLA Miami. The next one could be yours - in your city, with your community, under the umbrella.',
+  openGraph: {
+    title: 'For Organizers · ZAOstock 2026',
+    description: 'Built a community? Run your own ZAO. The next chapter could be yours - in your city, with your community.',
+    url: 'https://zaostock.com/event-organizers',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'For Organizers · ZAOstock 2026',
+    description: 'Run your own ZAO in your city. Next chapter could be yours.',
+  },
 };
 
 export default function EventOrganizersPage() {

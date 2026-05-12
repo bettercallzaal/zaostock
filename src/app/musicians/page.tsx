@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: 'For Musicians · ZAOstock',
   description:
     'Made music nobody is paying you to make? You are who we built this for. ZAOstock is a one-day outdoor festival in Ellsworth Maine on October 3, 2026. Every artist on stage was discovered through The ZAO.',
+  openGraph: {
+    title: 'For Musicians · ZAOstock 2026',
+    description: 'Made music nobody is paying you to make? Submit for the lineup. October 3, 2026. Ellsworth, Maine.',
+    url: 'https://zaostock.com/musicians',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'For Musicians · ZAOstock 2026',
+    description: 'Made music nobody is paying you to make? Submit for the lineup. October 3, 2026.',
+  },
 };
 
 export default function MusiciansPage() {
