@@ -44,7 +44,7 @@ Walk in this order:
 - Pro Ticket section - $50, 20 spots
 - Volunteer + Get on the list
 - Sponsors - 3 tracks (Main Stage / Broadcast / Year-Round)
-- Lineage - PALOOZA + CHELLA + ZAOville
+- Lineage - ZAO-PALOOZA + ZAO-CHELLA + ZAOville
 
 Ask the team:
 - Anything that reads wrong?
@@ -128,7 +128,7 @@ ZAOstock 2026 planning is live.
 
 Saturday October 3, 2026. Franklin Street Parklet, Ellsworth Maine. One stage, all day, independent artists with DJs between. Part of the 9th annual Art of Ellsworth during Maine Craft Weekend.
 
-This is chapter 3 in the ZAO Festivals series. PALOOZA in NYC (April 2024) and CHELLA in Miami (December 2024) came before. Both broke even. Both were built by the community for the community.
+This is chapter 3 in the ZAO Festivals series. ZAO-PALOOZA in NYC (April 2024) and ZAO-CHELLA in Miami (December 2024) came before. Both broke even. Both were built by the community for the community.
 
 We're opening the doors early on three sides:
 
@@ -173,7 +173,7 @@ Free to attend. Walk in from the sidewalk and stay because it is good.
 
 If you want to plug in deeper, a Pro Ticket is $50 (20 spots in round 1). Pro Ticket buyers get a 1:1 with someone on the ZAO team before the festival - we use that conversation to find you a real way to get involved.
 
-ZAOstock is chapter 3 in the ZAO Festivals series after PALOOZA (NYC, April 2024) and CHELLA (Miami, December 2024). Both prior festivals broke even.
+ZAOstock is chapter 3 in the ZAO Festivals series after ZAO-PALOOZA (NYC, April 2024) and ZAO-CHELLA (Miami, December 2024). Both prior festivals broke even.
 
 Built by 27 teammates, the local Ellsworth crew, and the artists who want this to exist. 100+ ZAO community members supporting from afar.
 
