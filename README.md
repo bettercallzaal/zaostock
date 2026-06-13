@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **This repo has moved.** ZAOstock now lives at **[ZAODEVZ/ZAOstock](https://github.com/ZAODEVZ/ZAOstock)**. This repository is archived and read-only. All new work happens in the ZAODEVZ org.
+
+---
+
 # zaostock
 
 The dashboard + public site for **ZAOstock 2026**, a one-day artist-built music festival in downtown Ellsworth, Maine on Saturday, October 3, 2026.
